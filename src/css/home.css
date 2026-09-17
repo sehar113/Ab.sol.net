@@ -227,20 +227,32 @@ img {
   max-width: 480px;
   margin: auto;
   padding: 28px;
-  /* Fallback: agar blur fail ho to bhi dark bg = text readable */
-  background: rgba(15, 18, 26, 0.55);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* LIGHT glass — localhost wala look */
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.06)
+  );
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
+/* Dark fallback SIRF un browsers ke liye jo blur support nahi karte */
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .booking-widget {
+    background: rgba(18, 22, 30, 0.8);
+  }
+}
 .glass-group {
   width: 100%;
   min-height: 52px;
