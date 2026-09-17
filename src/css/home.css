@@ -229,8 +229,8 @@ img {
   padding: 28px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(19px);
+  border: 1px solid rgba(255, 255, 255, 0.436);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -275,7 +275,7 @@ img {
 
 .glass-group input::placeholder,
 .glass-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.909);
 }
 
 .glass-group-textarea {
@@ -401,7 +401,7 @@ img {
 
 .wa-row span {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.959);
 }
 
 .wa-link {
