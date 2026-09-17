@@ -294,7 +294,7 @@ img {
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("/images/hero.png");
+  background-image: url("/images/hero.jpg");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 36px;
