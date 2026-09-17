@@ -1196,7 +1196,7 @@ export default function Home() {
         <div className="cat-grid">
           <a href="/products" className="cat-card reveal" data-color="indigo" ref={addRevealRef}>
             <div className="cat-card-img">
-              <img src="/images/Business application development services in usa.png" alt="Business Applications" />
+              <img src="/images/business-applications.png" alt="Business Applications" />
               <span className="cat-card-num">01</span>
             </div>
             <div className="cat-card-body">
@@ -1218,7 +1218,8 @@ export default function Home() {
 
           <a href="/cyber-security" className="cat-card reveal delay" data-color="crimson" ref={addRevealRef}>
             <div className="cat-card-img">
-              <img src="/images/cyber security solutions company ,saudi arabia.jpg" alt="Cyber Security" />
+              
+              <img src="/images/cyber-security.png" alt="Cyber Security" />
               <span className="cat-card-num">02</span>
             </div>
             <div className="cat-card-body">
@@ -1240,10 +1241,9 @@ export default function Home() {
 
           <a href="/software-development" className="cat-card reveal delay2" data-color="teal" ref={addRevealRef}>
             <div className="cat-card-img">
-              <img
-                src="/images/software development company website in USA, UK, Saudia ,Pakistan.png"
-                alt="Software Development"
-              />
+
+             <img src="/images/software-development.png" alt="Software Development" />
+
               <span className="cat-card-num">03</span>
             </div>
             <div className="cat-card-body">
@@ -1271,10 +1271,9 @@ export default function Home() {
             ref={addRevealRef}
           >
             <div className="cat-card-img">
-              <img
-                src="/images/it infrastructure Deployment comapny services Reliable & Cost-Effective.png"
-                alt="IT Infrastructure"
-              />
+
+              <img src="/images/it-infrastructure.png" alt="IT Infrastructure" />
+
               <span className="cat-card-num">04</span>
             </div>
             <div className="cat-card-body">
