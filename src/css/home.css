@@ -288,7 +288,7 @@ img {
 
 .glass-group input::placeholder,
 .glass-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.957);
 }
 
 .glass-group-textarea {
