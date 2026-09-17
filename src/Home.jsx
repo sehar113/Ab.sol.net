@@ -236,6 +236,32 @@ const CONTACT_SERVICES = [
   'IT Staffing',
 ];
 
+/* =====================================================
+   RESOURCES / PDF DOWNLOADS (old website ke PDFs)
+===================================================== */
+const RESOURCES = {
+  featured: {
+    tag: 'Research Profile',
+    title: 'AI Advantages Profile',
+    desc: 'How enterprises across KSA, USA & Australia are using AI to predict threats, automate operations, and cut costs — real numbers, frameworks, and deployment models inside.',
+    pdf: 'https://ab-sol.com/pdf/AI%20Advantages%20Profile.pdf',
+    meta: '23 Pages · PDF · Free Download',
+  },
+  brochures: [
+    {
+      tag: 'AI Security',
+      title: 'AI-Powered Cybersecurity',
+      desc: 'Leverage AI to predict, detect, and respond to cyber threats in real-time — powered by our Raptor Eye security stack.',
+      pdf: 'https://ab-sol.com/pdf/AI%20Advantages%20Profile.pdf',
+    },
+    {
+      tag: 'AI Automation',
+      title: 'Intelligent Automation',
+      desc: 'Transform business processes with AI-driven automation to reduce costs and improve operational efficiency.',
+      pdf: 'https://ab-sol.com/pdf/AI%20Advantages%20Profile.pdf',
+    },
+  ],
+};
 
 /* =====================================================
    ENGAGEMENT PHASES (N-iX style — apna content)
@@ -1439,6 +1465,84 @@ export default function Home() {
                 <p className="insight-meta">{post.date} · {post.read}</p>
                 <span className="insight-link">
                   Read article <span>→</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+            {/* =============================================
+          SECTION: RESOURCES & PDF DOWNLOADS
+      ============================================== */}
+      <section className="res-section" id="resources">
+        <div className="res-head reveal" ref={addRevealRef}>
+          <p className="sec-eyebrow">Resources &amp; Downloads</p>
+          <h2 className="sec-h2">
+            Free reports,<em>real insights.</em>
+          </h2>
+          <p className="res-sub">
+            Download our research profiles and product brochures — see exactly how
+            our AI and security solutions work before you talk to anyone.
+          </p>
+        </div>
+
+        {/* ——— FEATURED BANNER ——— */}
+        <a
+          className="res-banner reveal"
+          ref={addRevealRef}
+          href={RESOURCES.featured.pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="res-banner-copy">
+            <span className="res-banner-tag">{RESOURCES.featured.tag}</span>
+            <h3 className="res-banner-title">{RESOURCES.featured.title}</h3>
+            <p className="res-banner-desc">{RESOURCES.featured.desc}</p>
+            <span className="res-banner-meta">{RESOURCES.featured.meta}</span>
+          </div>
+
+          <div className="res-banner-visual">
+            <div className="res-doc">
+              <span className="res-doc-fold"></span>
+              <span className="res-doc-line w70"></span>
+              <span className="res-doc-line w90"></span>
+              <span className="res-doc-line w50"></span>
+              <span className="res-doc-line w80"></span>
+              <span className="res-doc-line w60"></span>
+            </div>
+            <span className="res-doc-badge">PDF</span>
+            <span className="res-banner-btn">
+              Download the report <span>↓</span>
+            </span>
+          </div>
+        </a>
+
+        {/* ——— BROCHURE CARDS ——— */}
+        <div className="res-grid reveal" ref={addRevealRef}>
+          {RESOURCES.brochures.map((b, i) => (
+            <a
+              className="res-card"
+              key={i}
+              href={b.pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="res-card-doc">
+                <div className="res-mini-doc">
+                  <span className="res-doc-fold"></span>
+                  <span className="res-doc-line w80"></span>
+                  <span className="res-doc-line w60"></span>
+                  <span className="res-doc-line w70"></span>
+                </div>
+                <span className="res-doc-badge sm">PDF</span>
+              </div>
+              <div className="res-card-body">
+                <span className="res-card-tag">{b.tag}</span>
+                <h3>{b.title}</h3>
+                <p>{b.desc}</p>
+                <span className="res-card-link">
+                  Download Brochure <span>→</span>
                 </span>
               </div>
             </a>

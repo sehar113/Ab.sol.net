@@ -4058,3 +4058,396 @@ select.c-field option {
 .gr-card:hover {
   border-top-color: transparent;
 }
+
+/* =====================================================
+   RESOURCES & PDF DOWNLOADS SECTION
+===================================================== */
+
+.res-section {
+  padding: 90px max(5vw, 30px);
+  background: #fff;
+}
+
+.res-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.res-sub {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* =============================================
+   FEATURED BANNER (red gradient, N-iX style)
+============================================= */
+.res-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr auto;
+  gap: 50px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto 30px;
+  padding: 60px 65px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #5f0c0c 0%, #911616 48%, #b8433a 100%);
+  box-shadow: 0 30px 70px rgba(145, 22, 22, 0.28);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.res-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 40px 90px rgba(145, 22, 22, 0.38);
+}
+
+/* Glow orbs + dotted texture */
+.res-banner::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 65%);
+  top: -160px;
+  right: -80px;
+  pointer-events: none;
+  animation: resGlow 12s ease-in-out infinite alternate;
+}
+
+.res-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+@keyframes resGlow {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-40px, 30px) scale(1.15); }
+}
+
+.res-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.res-banner-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.res-banner-title {
+  font: 600 clamp(32px, 4vw, 52px) / 1.08 var(--serif);
+  letter-spacing: -1px;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.res-banner-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 540px;
+  margin: 0 0 18px;
+}
+
+.res-banner-meta {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ——— Animated PDF Document (CSS-drawn) ——— */
+.res-banner-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.res-doc {
+  position: relative;
+  width: 130px;
+  height: 165px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 26px 16px 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  animation: resDocFloat 5s ease-in-out infinite alternate;
+  transition: transform 0.4s ease;
+}
+
+.res-banner:hover .res-doc {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+/* Peeche doosri page (stack effect) */
+.res-doc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  transform: rotate(6deg) translate(10px, 6px);
+  z-index: -1;
+}
+
+/* Folded corner */
+.res-doc-fold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 30px 30px 0;
+  border-color: transparent #e8ddd6 transparent transparent;
+  border-top-right-radius: 10px;
+}
+
+.res-doc-line {
+  display: block;
+  height: 6px;
+  border-radius: 4px;
+  background: #e9e4df;
+  margin-bottom: 10px;
+}
+
+.res-doc-line.w90 { width: 90%; }
+.res-doc-line.w80 { width: 80%; }
+.res-doc-line.w70 { width: 70%; }
+.res-doc-line.w60 { width: 60%; }
+.res-doc-line.w50 { width: 50%; }
+
+@keyframes resDocFloat {
+  0%   { transform: translateY(0) rotate(-1deg); }
+  100% { transform: translateY(-12px) rotate(2deg); }
+}
+
+.res-doc-badge {
+  position: absolute;
+  bottom: -12px;
+  left: -14px;
+  background: var(--ink);
+  color: #fff;
+  font: 800 12px var(--sans);
+  letter-spacing: 1.5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: resDocFloat 5s ease-in-out infinite alternate;
+}
+
+/* ——— Banner Download Button (shine effect) ——— */
+.res-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  font: 700 12px var(--sans);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.res-banner-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.res-banner:hover .res-banner-btn {
+  background: #fff;
+  color: var(--red);
+  border-color: #fff;
+}
+
+.res-banner:hover .res-banner-btn::before {
+  left: 120%;
+}
+
+.res-banner-btn span {
+  transition: transform 0.3s;
+}
+
+.res-banner:hover .res-banner-btn span {
+  transform: translateY(3px);
+}
+
+/* =============================================
+   BROCHURE CARDS
+============================================= */
+.res-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.res-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.res-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.09);
+  border-color: rgba(145, 22, 22, 0.3);
+}
+
+/* Mini doc thumbnail */
+.res-card-doc {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.res-mini-doc {
+  position: relative;
+  width: 86px;
+  height: 110px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 12px 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
+}
+
+.res-card:hover .res-mini-doc {
+  transform: rotate(-4deg) scale(1.06);
+}
+
+.res-mini-doc .res-doc-line {
+  height: 5px;
+  margin-bottom: 8px;
+}
+
+.res-doc-badge.sm {
+  bottom: -10px;
+  left: -10px;
+  font-size: 10px;
+  padding: 6px 11px;
+}
+
+.res-card-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(145, 22, 22, 0.07);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.res-card-body h3 {
+  font: 500 21px / 1.25 var(--serif);
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.res-card-body p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.res-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 5px;
+}
+
+.res-card-link span {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.res-card:hover .res-card-link span {
+  transform: translateX(5px);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 1000px) {
+  .res-banner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 45px 35px;
+    text-align: center;
+  }
+  .res-banner-visual {
+    order: -1;
+  }
+  .res-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .res-section {
+    padding: 60px 16px;
+  }
+  .res-banner {
+    padding: 36px 24px;
+    border-radius: 22px;
+  }
+  .res-banner-title {
+    font-size: 28px;
+  }
+  .res-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 22px;
+  }
+  .res-card-link {
+    justify-content: center;
+  }
+}
