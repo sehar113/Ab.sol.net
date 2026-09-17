@@ -580,9 +580,9 @@ export default function Home() {
 
           <div className="trust-head reveal" ref={addRevealRef}>
             <div className="trust-head-left">
-              <p className="trust-eyebrow">IT Company Riyadh</p>
+              <p className="trust-eyebrow">IT Company in Riyadh Saudi Arabia</p>
               <h1 className="trust-title">
-                20 Years of Experience in IT
+                IT Company in Riyadh 20 Years of Experience in 
                 <em>AI Agent Development &amp; Cybersecurity - Cloud Computing Security Services</em>
                 <span className="trust-title-tag">
                   Trusted Software Development Company in Saudi Arabia
@@ -593,9 +593,7 @@ export default function Home() {
             <div className="trust-head-right">
               <span className="trust-head-num">/ Since 2002</span>
               <p className="trust-sub">
-                From Customer Relationship Management to advanced cybersecurity,
-                Absolute Solution has spent two decades helping enterprises across
-                KSA, USA &amp; Australia modernize, secure, and scale with confidence.
+                Absolute Solutions is a trusted technology partner for comprehensive cybersecurity, IT infrastructure, and custom software development. Alongside our advanced security platforms like Raptoreye, we deliver top-tier nearshore software development company solutions and scalable custom application development company services for clients across KSA, the US, UK, and Australia. Whether you need robust devops services, ai agent development services, or agile software development outsourcing, our experts help global enterprises accelerate digital transformation with secure, high-performance tech stacks.
               </p>
               <a href="/about" className="trust-head-link">
                 More about our company <span>→</span>
