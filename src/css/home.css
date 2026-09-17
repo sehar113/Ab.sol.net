@@ -227,22 +227,17 @@ img {
   max-width: 480px;
   margin: auto;
   padding: 28px;
-  /* White + dark DONO layers — frosted + background hide */
-  background: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.18) 0%,
-    rgba(22, 28, 40, 0.42) 100%
-  );
-  backdrop-filter: blur(28px) saturate(150%);
-  -webkit-backdrop-filter: blur(28px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .glass-group {
@@ -252,18 +247,19 @@ img {
   align-items: center;
   padding: 10px 14px;
   border-radius: 12px;
-  background: rgba(15, 20, 30, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: 0.3s ease;
   position: relative;
 }
 
 .glass-group:hover {
-  background: rgba(15, 20, 30, 0.5);
-  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
 .glass-group input,
 .glass-group select,
 .glass-group textarea {
@@ -271,16 +267,15 @@ img {
   border: none;
   outline: none;
   background: transparent;
-  color: #ffffff;
+  color: white;
   font-family: var(--sans);
-  font-size: 14.5px;
-  font-weight: 500;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 .glass-group input::placeholder,
 .glass-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .glass-group-textarea {
@@ -310,6 +305,7 @@ img {
   background: #ffffff;
 }
 
+/* Form Error States */
 .glass-group.has-error {
   border-color: #f87171 !important;
   background: rgba(248, 113, 113, 0.08) !important;
