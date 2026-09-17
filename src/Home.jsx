@@ -38,10 +38,10 @@ const SERVICE_FIELDS = {
    REAL COMPANY STATS (ab-sol.net se)
 ===================================================== */
 const TRUST_STATS = [
-  { value: 20, suffix: '+', label: 'Years of Experience', desc: 'Two decades of IT & cybersecurity excellence since 2002' },
-  { value: 54, suffix: '', label: 'Experts Team', desc: 'Skilled engineers, consultants & security specialists' },
-  { value: 375, suffix: '', label: 'Projects Completed', desc: 'Successfully delivered across multiple industries' },
-  { value: 340, suffix: '+', label: 'Happy Clients', desc: 'Enterprises trusting us across KSA, USA & Australia' },
+  { value: 20, suffix: '+', label: 'Years of Experience', desc: 'For over two decades, we have built and measured software that runs in production.' },
+  { value: 54, suffix: '', label: 'Experts Team', desc: 'Our executive team has guided the company through 20 years of continuous growth, including maintaining 100% client delivery' },
+  { value: 375, suffix: '', label: 'Projects Completed', desc: 'Absolute Solutions has set up a strong dedicated development team with wide expertise in PHP, JavaScript, and other technologies necessary for successful product delivery. Our team consists of several back-end software developers, a team lead, a QA specialist, and a project manager. Together with the client’s team and other distributed teams, we collaborate on the back-end of the website.' },
+  { value: 340, suffix: '+', label: 'Happy Clients', desc: 'Trusted by enterprises across KSA, the US, UK, and Australia' },
 ];
 
 /* =====================================================
@@ -591,7 +591,7 @@ export default function Home() {
             </div>
 
             <div className="trust-head-right">
-              <span className="trust-head-num">/ Since 2002</span>
+              <span className="trust-head-num">/ Founded 2006</span>
               <p className="trust-sub">
                 Absolute Solutions is a trusted technology partner for comprehensive cybersecurity, IT infrastructure, and custom software development. Alongside our advanced security platforms like Raptoreye, we deliver top-tier nearshore software development company solutions and scalable custom application development company services for clients across KSA, the US, UK, and Australia. Whether you need robust devops services, ai agent development services, or agile software development outsourcing, our experts help global enterprises accelerate digital transformation with secure, high-performance tech stacks.
               </p>
@@ -624,13 +624,13 @@ export default function Home() {
             <div className="certs-head">
               <p className="certs-eyebrow">Compliance &amp; Certifications</p>
               <h2 className="certs-title">
-                Our Global Certifications<em>&amp; Accreditations</em>
+                Our Compliance<em>&amp; Global Certificates</em>
               </h2>
               <span className="certs-line"></span>
               <p className="certs-sub">
-                Absolute Solutions is certified with internationally recognized standards
-                that demonstrate our commitment to quality, security, and continuous
-                improvement — giving our clients complete confidence in every project
+                Our commitment to excellence, security, and quality is validated by international standards
+                Absolute Solutions is proud to be certified with internationally recognized standards that demonstrate our commitment to quality, security, and continuous improvement.
+               — giving our clients complete confidence in every project
                 we deliver.
               </p>
             </div>
@@ -664,7 +664,7 @@ export default function Home() {
         <div className="happy-inner reveal" ref={addRevealRef}>
           <p className="happy-eyebrow">Happy Customer</p>
           <h2 className="happy-title">
-            Working at the highest level
+            Working at the Highest Level to Deliver Nearshore Software & AI Solutions
             <br />
             <em>with our clients</em>
           </h2>
@@ -703,7 +703,7 @@ export default function Home() {
         <div className="gr-head reveal" ref={addRevealRef}>
           <p className="sec-eyebrow">Google Reviews</p>
           <h2 className="sec-h2">
-            What our clients say,<em>straight from Google.</em>
+            What Global Clients Say About Our offshore software development services,<em>straight from Google.</em>
           </h2>
 
           <div className="gr-summary">
@@ -774,16 +774,15 @@ export default function Home() {
 
         <div className="ai-inner">
           <div className="ai-copy reveal" ref={addRevealRef}>
-            <p className="ai-eyebrow">Engineering Intelligence</p>
+            <p className="ai-eyebrow">Engineering Intelligence Softwares</p>
             <h2 className="ai-title">
-              AI tool adoption is up across enterprise engineering.
-              <em>Delivery metrics are not.</em>
+              Artificial Intelligence Consulting :
+              <em>Advanced Cloud-to-Cloud Integration & AI Agent Development Services</em>
             </h2>
             <p className="ai-desc">
-              Buying tools is easy — proving impact is not. We help enterprises turn
-              AI investment into measurable engineering outcomes: faster throughput,
-              higher quality, and shorter time-to-market, with clear baselines and
-              delivery governance that scales across teams.
+              Our Artificial Intelligence Consulting services help <b>CTOs and CIOs</b> adopt AI and modern cloud technologies with secure, scalable solutions. We provide <b>AI agent development services</b>, generative AI consulting, and <b>cloud computing and cloud services</b> integration to connect applications, data, and workflows across leading cloud environments. Our approach combines <b>cyber security identity and access management</b>, cloud computing services, data analytics AI, and intelligent automation to improve operational efficiency and business decision-making. From AI adoption and custom application development to cloud migration and cloud computing security services, we help organizations build reliable cybersecurity platforms, strengthen information security, and create AI-powered solutions that are ready to scale.
+
+
             </p>
             <div className="ai-actions">
               <a href="/contact" className="ai-btn">
