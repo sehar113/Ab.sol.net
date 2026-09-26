@@ -169,15 +169,11 @@ img {
 ===================================================== */
 
 .hero-slides {
-  position: relative;
-  min-height: 220px;
+  display: grid;   /* 🔥 Container hamesha SAB SE LAMBI slide ke hisaab se size lega */
 }
 
 .hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  grid-area: 1 / 1;   /* 🔥 Teeno slides ek hi grid cell mein stack — koi height change nahi */
   opacity: 0;
   transform: translateY(24px);
   transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s cubic-bezier(.4, 0, .2, 1);
@@ -185,10 +181,10 @@ img {
 }
 
 .hero-slide.active {
-  position: relative;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  z-index: 2;   /* cross-fade ke waqt nayi slide upar rahe */
 }
 
 .hero-slide-dots {
@@ -2287,22 +2283,22 @@ footer {
   height: 55px;
 }
 .testi-slides {
-  position: relative;
-  min-height: 220px;
+  display: grid;
 }
+
 .testi-slide {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.7s ease, transform 0.7s ease;
   pointer-events: none;
 }
+
 .testi-slide.active {
-  position: relative;
   opacity: 1;
   transform: none;
   pointer-events: auto;
+  z-index: 2;
 }
 .testi-text {
   font: 400 clamp(20px, 2.6vw, 30px) / 1.45 var(--serif);
@@ -4450,5 +4446,844 @@ select.c-field option {
   }
   .res-card-link {
     justify-content: center;
+  }
+}
+
+
+/* =====================================================
+   PARAGRAPH ALIGNMENT — sab paragraphs justify
+   (home.css ke END mein paste karein)
+===================================================== */
+
+.hero-description,
+.trust-sub,
+.trust-stat-desc,
+.certs-sub,
+.cert-desc2,
+.gr-text,
+.ai-desc,
+.ai-persona-sub,
+.phase-desc,
+.svc-column-head p,
+.cat-header p,
+.case-body > p,
+.industry-info p {
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 100%;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+
+/* =====================================================
+   WHAT WE DO — INTERACTIVE SERVICES DIRECTORY v2 (FIXED)
+   — stacked panels, zero layout shift, smooth hover —
+===================================================== */
+
+.wwd-section {
+  padding: 95px max(6vw, 35px);
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.wwd-head {
+  max-width: 1300px;
+  margin: 0 auto 46px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.wwd-title {
+  font: 400 clamp(30px, 3.8vw, 46px) / 1.12 var(--serif);
+  letter-spacing: -1.5px;
+  color: var(--ink);
+  margin: 0;
+}
+
+.wwd-title em {
+  display: block;
+  font-style: italic;
+  color: var(--red);
+  margin-top: 8px;
+}
+
+.wwd-head .sec-link span {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.wwd-head .sec-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ——— DESKTOP LAYOUT ——— */
+.wwd-layout {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 370px 1fr;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 36px rgba(23, 25, 29, 0.06);
+}
+
+/* Tabs column */
+.wwd-tabs {
+  display: flex;
+  flex-direction: column;
+  background: #fafbfc;
+  border-right: 1px solid var(--line);
+}
+
+.wwd-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  padding: 19px 24px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.25s ease;
+}
+
+.wwd-tab:last-of-type { border-bottom: none; }
+
+.wwd-tab::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.wwd-tab:hover { background: #f1f2f4; }
+.wwd-tab.active { background: #fff; }
+.wwd-tab.active::before { transform: scaleY(1); }
+
+.wwd-tab-num {
+  font: 600 11px var(--sans);
+  letter-spacing: 1px;
+  color: var(--muted);
+  min-width: 22px;
+  transition: color 0.25s ease;
+}
+
+.wwd-tab-label {
+  flex: 1;
+  font: 500 15px / 1.3 var(--sans);
+  color: var(--ink);
+  transition: color 0.25s ease;
+}
+
+.wwd-tab-arrow {
+  font-size: 14px;
+  color: var(--red);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.wwd-tab:hover .wwd-tab-arrow,
+.wwd-tab.active .wwd-tab-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wwd-tab.active .wwd-tab-num,
+.wwd-tab.active .wwd-tab-label {
+  color: var(--red);
+}
+.wwd-tab.active .wwd-tab-label { font-weight: 700; }
+
+.wwd-tab-footer {
+  margin-top: auto;
+  padding: 22px 24px;
+  background: var(--ink);
+}
+.wwd-tab-footer p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 10px;
+}
+.wwd-tab-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #ff8a75;
+  transition: color 0.25s ease;
+}
+.wwd-tab-footer a span { transition: transform 0.3s; }
+.wwd-tab-footer a:hover { color: #fff; }
+.wwd-tab-footer a:hover span { transform: translateX(4px); }
+
+/* ——— PANELS: stacked + fixed height + crossfade ——— */
+.wwd-panels {
+  display: grid;
+  height: clamp(560px, 80vh, 780px);   /* height HAMESHA same — page kabhi nahi hilta */
+}
+
+.wwd-panel {
+  grid-area: 1 / 1;
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 44px 34px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+  pointer-events: none;
+  scrollbar-width: thin;
+  scrollbar-color: #cfd3d9 transparent;
+}
+
+.wwd-panel::-webkit-scrollbar { width: 5px; }
+.wwd-panel::-webkit-scrollbar-track { background: transparent; }
+.wwd-panel::-webkit-scrollbar-thumb { background: #cfd3d9; border-radius: 999px; }
+
+.wwd-panel.active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition: opacity 0.4s ease 0.08s, transform 0.4s ease 0.08s, visibility 0s;
+}
+
+/* ——— Panel content ——— */
+.wwd-tag {
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(145, 22, 22, 0.06);
+  padding: 5px 13px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.wwd-panel-title {
+  font: 500 clamp(24px, 2.4vw, 32px) / 1.2 var(--serif);
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.wwd-panel-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 660px;
+  margin-bottom: 26px;
+  text-align: justify;
+}
+
+.wwd-links {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.wwd-links li {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wwd-links a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  height: 100%;
+  padding: 16px 18px;
+  transition: background 0.25s ease;
+}
+
+.wwd-links a:hover { background: #f8f9fa; }
+
+.wwd-link-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: var(--muted);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.wwd-links a:hover .wwd-link-icon {
+  background: var(--red);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.wwd-link-text b {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.wwd-links a:hover b { color: var(--red); }
+
+.wwd-link-text small {
+  display: block;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #9ca0a6;
+}
+
+.wwd-panel-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 2px solid var(--red);
+  padding-bottom: 6px;
+  transition: color 0.25s ease;
+}
+.wwd-panel-cta span { transition: transform 0.3s; }
+.wwd-panel-cta:hover { color: var(--red); }
+.wwd-panel-cta:hover span { transform: translateX(4px); }
+
+/* ——— MOBILE ACCORDION (desktop pe hidden) ——— */
+.wwd-accordion { display: none; }
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 900px) {
+  .wwd-layout { display: none; }
+
+  .wwd-accordion {
+    display: block;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+
+  .wwd-acc { border-bottom: 1px solid var(--line); }
+
+  .wwd-acc-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .wwd-acc-num {
+    font: 600 12px var(--sans);
+    letter-spacing: 1px;
+    color: var(--muted);
+    transition: color 0.25s;
+  }
+
+  .wwd-acc-label {
+    flex: 1;
+    font: 600 16px / 1.3 var(--sans);
+    color: var(--ink);
+    transition: color 0.25s;
+  }
+
+  .wwd-acc-toggle {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--muted);
+    transition: all 0.3s ease;
+  }
+
+  .wwd-acc.open .wwd-acc-num,
+  .wwd-acc.open .wwd-acc-label { color: var(--red); }
+
+  .wwd-acc.open .wwd-acc-toggle {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+    transform: rotate(45deg);
+  }
+
+  /* Modern open/close — content KITNA BHI lamba ho, poora khulta/band hota hai */
+  .wwd-acc-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .wwd-acc.open .wwd-acc-body {
+    grid-template-rows: 1fr;
+  }
+
+  .wwd-acc-body-inner {
+    overflow: hidden;
+    min-height: 0;
+    padding: 2px 4px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .wwd-section { padding: 60px 16px; }
+
+  .wwd-head {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .wwd-links { grid-template-columns: 1fr; }
+  .wwd-acc-body-inner { padding: 2px 2px 24px; }
+  .wwd-acc-label { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wwd-panel,
+  .wwd-acc-body {
+    transition: none;
+  }
+}
+
+/* =====================================================
+   CLIENT OUTCOMES BY INDUSTRY — LUXURY IMAGE CARDS
+===================================================== */
+
+.coi-section {
+  padding: 95px max(6vw, 35px);
+  background:
+    radial-gradient(circle at 90% 0%, rgba(30, 58, 95, 0.05), transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(145, 22, 22, 0.04), transparent 45%),
+    #fbfbfc;
+}
+
+.coi-head {
+  max-width: 1300px;
+  margin: 0 auto 46px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.coi-head .sec-link span {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.coi-head .sec-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ——— GRID: featured full-width + 3 below ——— */
+.coi-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.coi-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+/* ——— CARD SHELL ——— */
+.coi-card {
+  /* theme vars */
+  --th: #911616;
+  --th-dark: #a82020;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.coi-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--th);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.14);
+}
+
+/* top accent line — hover pe slide-in */
+.coi-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--th), var(--th-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 5;
+}
+.coi-card:hover::before { transform: scaleX(1); }
+
+/* themes */
+.coi-card.theme-indigo  { --th: #1e3a5f; --th-dark: #2d5a8e; }
+.coi-card.theme-crimson { --th: #6b1010; --th-dark: #a82020; }
+.coi-card.theme-teal    { --th: #0d4f4f; --th-dark: #1a8a7d; }
+.coi-card.theme-slate   { --th: #2c3038; --th-dark: #4a5060; }
+
+/* ——— MEDIA (image area) ——— */
+.coi-media {
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  /* image fail ho to bhi luxury gradient dikhe */
+  background: linear-gradient(135deg, var(--th) 0%, var(--th-dark) 100%);
+}
+
+.coi-card.featured .coi-media {
+  min-height: 100%;
+  height: 100%;
+}
+
+.coi-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.coi-card:hover .coi-media img {
+  transform: scale(1.08);
+}
+
+/* theme gradient overlay — photo ke upar */
+.coi-media-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.25) 55%,
+      rgba(0, 0, 0, 0.72) 100%),
+    linear-gradient(135deg, rgba(30, 30, 30, 0.28), transparent 60%);
+  pointer-events: none;
+}
+
+/* shine sweep on hover */
+.coi-media::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -90%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.85s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.coi-card:hover .coi-media::after { left: 140%; }
+
+/* ghost number — giant serif, image ke peeche se jhalakta */
+.coi-ghost-num {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font: 700 clamp(80px, 9vw, 130px) / 1 var(--serif);
+  color: rgba(255, 255, 255, 0.13);
+  letter-spacing: -4px;
+  pointer-events: none;
+  transition: transform 0.6s ease, color 0.6s ease;
+  z-index: 2;
+}
+
+.coi-card:hover .coi-ghost-num {
+  transform: translateY(-6px);
+  color: rgba(255, 255, 255, 0.22);
+}
+
+/* glass solutions count badge */
+.coi-count {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 7px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* caption — title + tagline */
+.coi-media-caption {
+  position: relative;
+  z-index: 4;
+  padding: 24px;
+  max-width: 75%;
+}
+
+.coi-title {
+  font: 500 clamp(24px, 2.2vw, 30px) / 1.12 var(--serif);
+  letter-spacing: -0.6px;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.coi-card.featured .coi-title {
+  font-size: clamp(28px, 2.8vw, 38px);
+}
+
+.coi-tagline {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ——— BODY ——— */
+.coi-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 28px 28px;
+  background: #fff;
+}
+
+.coi-card.featured .coi-body {
+  padding: 36px 40px;
+}
+
+.coi-desc {
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.coi-card.featured .coi-desc {
+  font-size: 14.5px;
+  max-width: 640px;
+}
+
+/* solutions list — featured mein 2-column */
+.coi-list {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.coi-card.featured .coi-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 28px;
+}
+
+.coi-list li { border-bottom: 1px solid #f0f1f2; }
+.coi-list li:last-child { border-bottom: none; }
+.coi-card.featured .coi-list li:nth-last-child(-n+2) { border-bottom: none; }
+
+.coi-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  transition: padding-left 0.28s ease;
+}
+
+.coi-list a:hover { padding-left: 12px; }
+
+.coi-link-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: #f3f4f6;
+  color: var(--muted);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.28s ease;
+}
+
+.coi-list a:hover .coi-link-icon {
+  background: var(--th);
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.coi-link-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.coi-list a:hover .coi-link-name { color: var(--th); }
+
+/* CTA */
+.coi-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 2px solid var(--th);
+  padding-bottom: 6px;
+  transition: color 0.25s ease;
+}
+
+.coi-cta span { transition: transform 0.3s; }
+.coi-cta:hover { color: var(--th); }
+.coi-cta:hover span { transform: translateX(4px); }
+
+/* ——— RESPONSIVE ——— */
+@media (max-width: 1100px) {
+  .coi-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  .coi-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* featured bhi normal card ban jata hai — image top pe */
+  .coi-card.featured {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coi-card.featured .coi-media {
+    min-height: 230px;
+    height: auto;
+  }
+
+  .coi-card.featured .coi-body { padding: 24px 20px 24px; }
+  .coi-card.featured .coi-list { grid-template-columns: 1fr; column-gap: 0; }
+  .coi-card.featured .coi-list li:nth-last-child(-n+2) { border-bottom: 1px solid #f0f1f2; }
+  .coi-card.featured .coi-list li:last-child { border-bottom: none; }
+  .coi-card.featured .coi-desc { max-width: 100%; }
+}
+
+@media (max-width: 560px) {
+  .coi-section { padding: 60px 16px; }
+
+  .coi-head {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .coi-media { min-height: 210px; }
+  .coi-media-caption { padding: 18px; max-width: 85%; }
+  .coi-title { font-size: 22px; }
+  .coi-ghost-num { font-size: 72px; right: 12px; }
+  .coi-count { bottom: 14px; right: 14px; }
+  .coi-body { padding: 20px 18px 22px; }
+  .coi-list a { padding: 11px 2px; }
+}
+
+/* =====================================================
+   MOBILE — justify text hatao (huge word gaps fix)
+   Narrow screens pe justify = bade gaps. Left-align best.
+===================================================== */
+
+@media (max-width: 768px) {
+  .hero-description,
+  .trust-sub,
+  .trust-stat-desc,
+  .certs-sub,
+  .cert-desc2,
+  .gr-text,
+  .ai-desc,
+  .ai-persona-sub,
+  .phase-desc,
+  .svc-column-head p,
+  .cat-header p,
+  .case-body > p,
+  .industry-info p,
+  .coi-desc {
+    text-align: left;          /* justify OFF */
+    text-justify: auto;
+    word-spacing: normal;
+  }
+}
+
+/* Desktop pe bhi thoda natural ragged edge — modern browsers */
+@supports (text-wrap: pretty) {
+  .coi-desc,
+  .case-body > p,
+  .gr-text {
+    text-wrap: pretty;   /* left-align pe lines ka balance acha karta hai */
   }
 }

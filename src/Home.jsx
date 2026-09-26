@@ -38,10 +38,10 @@ const SERVICE_FIELDS = {
    REAL COMPANY STATS (ab-sol.net se)
 ===================================================== */
 const TRUST_STATS = [
-  { value: 20, suffix: '+', label: 'Years of Experience', desc: 'For over two decades, we have built and measured software that runs in production.' },
-  { value: 54, suffix: '', label: 'Experts Team', desc: 'Our executive team has guided the company through 20 years of continuous growth, including maintaining 100% client delivery' },
+  { value: 20, suffix: '+', label: 'Years of Experience', desc: 'For over two decades, we have built and measured software that runs in production. Our journey reflects an unwavering commitment to engineering excellence, industry best practices, and adapting to modern technological shifts. By continuously refining our development lifecycles and software architectures, we ensure that every digital solution we deliver remains robust, scalable, and tailored to long-term business goals.' },
+  { value: 54, suffix: '', label: 'Experts Team', desc: 'Our executive team has guided the company through 20 years of continuous growth, including maintaining 100% client delivery. Alongside our core technical capabilities, our specialists excel in driving advanced SEO strategies, high-performing digital marketing, and user-centric UI/UX design. By combining deep technical proficiency with data-driven optimization, we ensure that every platform we launch scales effectively and delivers maximum digital impact.' },
   { value: 375, suffix: '', label: 'Projects Completed', desc: 'Absolute Solutions has set up a strong dedicated development team with wide expertise in PHP, JavaScript, and other technologies necessary for successful product delivery. Our team consists of several back-end software developers, a team lead, a QA specialist, and a project manager. Together with the client’s team and other distributed teams, we collaborate on the back-end of the website.' },
-  { value: 340, suffix: '+', label: 'Happy Clients', desc: 'Trusted by enterprises across KSA, the US, UK, and Australia' },
+  { value: 340, suffix: '+', label: 'Happy Clients', desc: 'Trusted by enterprises across KSA, the US, UK, and Australia, we take pride in building long-lasting partnerships driven by transparency and exceptional results. Our commitment to quality software delivery, responsive communication, and continuous post-launch support ensures that every client achieves measurable business growth. We continuously adapt to evolving market demands to deliver secure, scalable, and high-performance digital solutions worldwide.' },
 ];
 
 /* =====================================================
@@ -136,45 +136,76 @@ const GOOGLE_REVIEWS = [
   },
 ];
 
-
-const CASE_STUDIES = [
+/* =====================================================
+   CLIENT OUTCOMES BY INDUSTRY (luxury image cards)
+===================================================== */
+const INDUSTRY_OUTCOMES = [
   {
-    tag: 'Banking & Finance',
-    title: 'Automated payment reconciliation platform for a leading UK bank',
-    desc: 'We rebuilt a legacy reconciliation workflow into a real-time, rules-driven platform processing millions of transactions daily with full audit trails.',
-    metric: '65%',
-    metricLabel: 'faster reconciliation cycles',
-    stats: [
-      { value: '65%', label: 'Faster reconciliation' },
-      { value: '30%', label: 'Lower ops cost' },
-      { value: '24/7', label: 'Real-time monitoring' },
-    ],
+    id: 'banking',
+    num: '01',
     theme: 'indigo',
-    featured: true,
+    img: '/images/banking services.jpg',
+    title: 'Banking Services',
+    tag: 'Financial Technology & Digital Banking',
+    desc: 'IT Infrastructure Services for Banking and Financial Companies:With 20 years of experience in IT for banking and financial services, Absolute Solutions builds and manages secure, reliable, and future-proof IT infrastructures for clients in these industries.IT infrastructure services enable banking and financial services companies to maintain uninterrupted, secure, and cost-effective IT operations through tailored infrastructure design, continuous monitoring, rapid issue resolution, and strategic optimization of infrastructure components. Absolute solutions  team can build and manage your IT infrastructure according to ITSM best practices to ensure business continuity, protect sensitive financial data, and avoid compliance breaches.',
+    solutions: [
+      { name: 'Account Statement', href: 'https://ab-sol.net/account-statement' },
+      { name: 'Billing & VAT (EMS)', href: 'https://ab-sol.net/billing-vat-ems' },
+      { name: 'Customer Account Master Data', href: 'https://ab-sol.net/customer-account-master-data' },
+      { name: 'Federal Reporting', href: 'https://ab-sol.net/federal-reporting' },
+      { name: 'MCI Link Application', href: 'https://ab-sol.net/mci-link-application' },
+      { name: 'IPO Management Module', href: 'https://ab-sol.net/ipo-management-module' },
+      { name: 'Auction Bidding System', href: 'https://ab-sol.net/auction-bidding' },
+    ],
+    cta: { label: 'Explore banking services', href: 'https://ab-sol.net/banking-services' },
   },
   {
-    tag: 'Healthcare',
-    title: 'AI-powered patient registry for a US healthcare network',
-    desc: 'A secure registry platform uniting oncology data from 12 hospitals with role-based access and clinical analytics.',
-    metric: '1.2M',
-    metricLabel: 'patient records unified',
-    stats: [
-      { value: '1.2M', label: 'Records unified' },
-      { value: '99.9%', label: 'Platform uptime' },
-    ],
+    id: 'saas',
+    num: '02',
     theme: 'crimson',
+    img: '/images/Software-as-a-Service.jpg',
+    title: 'Software as a Service',
+    tag: 'Cloud-hosted platforms',
+    desc: 'Software as a Service:The intelligent platform to manage the life cycle of your software needs. Software-as-a-Service applications is the best business solution delivery model of the latest generation — where the application is hosted remotely on the solution providers infrastructure.',
+    solutions: [
+      { name: 'Inventory Control & Management', href: 'https://ab-sol.net/inventory-control-management-solutions' },
+      { name: 'Raptor Eye Solution', href: 'https://ab-sol.net/raptor-eye-solution' },
+      { name: 'Document Management Solution', href: 'https://ab-sol.net/document-management-solution' },
+    ],
+    cta: { label: 'Explore SaaS platforms', href: 'https://ab-sol.net/software-as-a-service' },
   },
   {
-    tag: 'Logistics',
-    title: 'Real-time fleet analytics for a KSA logistics leader',
-    desc: 'Live telemetry dashboards and route intelligence across 2,000+ vehicles operating in the region.',
-    metric: '3x',
-    metricLabel: 'faster delivery insights',
-    stats: [
-      { value: '3x', label: 'Faster insights' },
-      { value: '45%', label: 'Route optimization' },
-    ],
+    id: 'products',
+    num: '03',
     theme: 'teal',
+    img: '/images/Product-services-provider.jpg',
+    title: 'Products',
+    tag: 'Healthcare software products',
+    desc: 'SOFTWARE SOLUTION FOR HEALTH INDUSTRY: An excellent national growth always requires a robust healthcare system because electronic health records provide safer and more reliable prescriptions. They also help in legible and complete documentation of patients medical history, so would not you like to check what Absolute Solutions offers you in the healthcare industry?',
+    solutions: [
+      { name: 'SMARTONCO', href: 'https://ab-sol.net/smartonco' },
+      { name: 'Medical Care Registries', href: 'https://ab-sol.net/medical-care-registries' },
+      { name: 'Medical & Health Care Solutions', href: 'https://ab-sol.net/medical-healthcare-industries-solutions' },
+    ],
+    cta: { label: 'Explore our products', href: 'https://ab-sol.net/products' },
+  },
+  {
+    id: 'outsourcing',
+    num: '04',
+    theme: 'slate',
+    img: '/images/Cyber-security-services-provider.jpg',
+    title: 'Outsourcing Services',
+    tag: 'Staffing & dedicated teams',
+    desc: 'ABSOL STAFFING AND OUTSOURCING — Bringing up the right talent for your business can be the ultimate need of any successful business. If you are looking to outsource your staffing requirements, via Absolute Solutions, you can access the talent pool you would not otherwise access.Absolute Solutions provides comprehensive AI development, software development, business application development, healthcare technology, QA and testing, IBM integration, Maximo outsourcing, and IT staffing services.',
+    solutions: [
+      { name: 'AI Development & Outsourcing', href: 'https://ab-sol.net/artificial-intelligence-development-outsourcing-services' },
+      { name: 'IBM Sphere + Message Brokers Staffing', href: 'https://ab-sol.net/ibm-sphere-message-brokers-staffing-outsourcing' },
+      { name: 'Business Application Development', href: 'https://ab-sol.net/business-application-development' },
+      { name: 'Health Care Services & Outsourcing', href: 'https://ab-sol.net/health-care-services-outsourcing' },
+      { name: 'QA & Testing Services & Outsourcing', href: 'https://ab-sol.net/quality-assurance-testing-services-outsourcing' },
+      { name: 'Maximo Outsourcing', href: 'https://ab-sol.net/maximo-outsourcing' },
+    ],
+    cta: { label: 'Explore outsourcing services', href: 'https://ab-sol.net/outsourcing-services' },
   },
 ];
 
@@ -271,35 +302,186 @@ const PHASES = [
     num: '01',
     name: 'Assess',
     duration: '2 Weeks',
-    title: 'Deep-dive into your codebase & delivery pipeline',
-    desc: 'Our engineers work directly inside your codebase with your team. Every AI workflow is documented, every gap is sized, and every opportunity is costed. If nothing in the report justifies the next step — you simply stop here. No strings attached.',
-    points: ['Full codebase & workflow audit', 'Gap analysis with cost estimates', 'Executive-ready assessment report'],
+    title: 'Deep-dive into your codebase, cloud environment & delivery pipeline',
+    desc: 'Our engineers work directly with your team to understand your technology landscape, software architecture, codebase, cloud environment, and existing workflows. We assess opportunities for AI strategy, AI workflow automation, generative AI, application modernization, and enterprise software development, identifying technical gaps, potential use cases, implementation requirements, and expected business impact.',
+    points: [
+      'Full codebase, workflow & technology assessment',
+      'AI strategy, gap analysis & cost estimation',
+      'Executive-ready assessment report',
+    ],
   },
   {
     num: '02',
     name: 'Pilot',
     duration: '4–6 Weeks',
     title: 'Implement the highest-value AI workflow first',
-    desc: 'A small senior team ships one measurable AI-powered workflow end-to-end — integrated with your actual cloud, data, and security infrastructure. Success metrics are agreed before the first line of code, so results are never a matter of opinion.',
-    points: ['One production-ready AI workflow', 'Baseline metrics agreed upfront', 'Weekly demos, zero surprises'],
+    desc: 'A senior engineering team takes the most valuable opportunity from strategy to implementation. We develop and integrate a production-ready AI-powered workflow, AI application, or AI agent within your real technology environment, working with your existing cloud, data, security, and software infrastructure. Whether the opportunity involves AI software development, generative AI development, or AI agent development, success metrics are agreed before development begins.',
+    points: [
+      'Production-ready AI workflow or AI application',
+      'AI agent development & integration',
+      'Baseline metrics agreed upfront',
+    ],
   },
   {
     num: '03',
     name: 'Expand',
     duration: '3–6 Months',
-    title: 'Roll out proven workflows across your teams',
-    desc: 'With the pilot validated, we scale across engineering, QA, and business units — with delivery governance, documented playbooks, and training so your own people can own and operate the system independently.',
-    points: ['Multi-team rollout plan', 'Playbooks & internal training', 'Delivery governance that scales'],
+    title: 'Scale proven AI solutions across your organisation',
+    desc: 'Once the pilot demonstrates measurable results, we expand proven solutions across engineering, QA, operations, and business teams. Our enterprise software development, software development consulting, cloud application development, and DevOps expertise helps integrate successful AI workflows into your wider technology environment.',
+    points: [
+      'Multi-team AI & software rollout plan',
+      'Cloud, DevOps & workflow integration',
+      'Playbooks, documentation & internal training',
+    ],
   },
   {
     num: '04',
     name: 'eXceed',
     duration: 'Ongoing',
-    title: 'Continuous optimization, measurable quarter by quarter',
-    desc: 'Quarterly reviews measure AI impact against your actual delivery metrics — throughput, quality, time-to-market. We keep optimizing what works and cut what does not. You stay in control of every renewal.',
-    points: ['Quarterly impact reviews', 'Metric-driven optimization', 'Exit anytime — no lock-in'],
+    title: 'Continuously optimise AI, automation & digital transformation',
+    desc: 'AI adoption does not end with deployment. We continuously measure performance against real delivery and business metrics, identifying opportunities for AI orchestration, intelligent automation, cloud optimization, and digital transformation. Where the results support further automation, we introduce advanced AI agents, generative AI solutions, and automated workflows across development, deployment, and operational processes.',
+    points: [
+      'Quarterly AI impact & performance reviews',
+      'AI orchestration, automation & optimisation',
+      'Continuous digital transformation with no lock-in',
+    ],
   },
 ];
+
+/* =====================================================
+   WHAT WE DO — SERVICES DIRECTORY DATA (N-iX style)
+===================================================== */
+const SERVICES_DIRECTORY = [
+  {
+    id: 'banking',
+    num: '01',
+    tab: 'Banking & Finance',
+    tag: 'Banking & Financial Technology',
+    title: 'Digital Banking Solutions & Financial Technology Provider',
+    desc: 'Absolute Solutions provides innovative digital banking solutions and financial technology services designed to help financial institutions improve efficiency, security, and customer experience. We help banks modernize core banking systems, streamline customer onboarding and digital onboarding, strengthen risk and fraud management, and deliver secure payment solutions. Our banking software and digital banking platform capabilities support customer engagement, KYC processes, loan origination, and scalable digital banking services while helping financial institutions build secure and connected banking experiences.',
+    links: [
+      { name: 'Account Statement', desc: 'Automated account statement generation and delivery through secure banking software and digital banking services', href: '#' },
+      { name: 'Payment Solutions & VAT (EMS)', desc: 'Advanced payment solutions, banking technology, and financial technology power modern workflows, where electronic billing and VAT compliance seamlessly fit.', href: '#' },
+      { name: 'Customer Account Master Data', desc: 'Centralized customer data management seamlessly supports KYC, customer onboarding, and customer engagement within modern digital banking experiences.', href: '#' },
+      { name: 'Federal Reporting', desc: 'Advanced financial technology and banking technology streamline regulatory reporting, seamlessly supporting compliance and risk management processes.', href: '#' },
+      { name: 'MCI Link Application', desc: 'A robust integration platform seamlessly fits modern banking technology, financial technology, and connected digital banking services, streamlining daily operations.', href: '#' },
+      { name: 'IPO Management Module', desc: 'End-to-end IPO process management, a financial-process management module fits banking software/fintech infrastructure.', href: '#' },
+    ],
+    cta: { label: 'Explore banking solutions', href: '#' },
+  },
+  {
+    id: 'cyber',
+    num: '02',
+    tab: 'AI - ML & AI consultant services',
+    tag: 'Cyber Security & VAPT',
+    title: 'AI Consulting and Implementation',
+    desc: 'Accelerate your growth with AI consulting services by Absolute Solutions. Enterprises in Riyadh today are tasked with unlocking the potential hidden within vast amounts of data. At Absolute Solutions, our experienced AI consultant services excel in crafting and deploying customized data and automation solutions. With our expertise in AI, ML, and Data Science, Generative AI, as well as Computer Vision, we enable organizations to streamline complex processes, enhance decision-making, and discover transformative opportunities. Our proven success in delivering AI tech consulting innovations equips us to generate significant business outcomes for your enterprise in Riyadh and beyond. Let us help you leverage AI not just to compete but also to lead in your industry.',
+    links: [
+      { name: 'AI strategy consulting', desc: 'Unlock your enterprise potential and drive peak organizational agility by aligning your business strategy with advanced AI capabilities. Our expert AI strategy consulting service helps you pinpoint high-impact opportunities, seamlessly embed AI solutions into your core workflows, and map out a clear roadmap for scalable adoption.', href: '#' },
+      { name: 'Data Strategy & Architecture Providers', desc: 'We help you define comprehensive data governance, ensure data quality and integrity, and architect scalable data systems aligned with your AI needs. Improve the efficiency of your business with expert services from the Data Governance & Architecture team at Absolute Solutions.', href: '#' },
+      { name: 'AI Implementation Services', desc: 'Our AI implementation roadmap service provides a detailed plan to deploy AI technologies effectively, addressing potential risks, timelines, and change management considerations. Tailored for enterprise impact with a clear, step-by-step roadmap aligned to your business objectives.', href: '#' },
+      { name: 'AI Assessment & Feasibility', desc: 'Start with an AI assessment to understand how to practically apply AI in your business to get commercial results. Our comprehensive assessment service allows you to evaluate the technical and business feasibility of AI solutions for your specific enterprise use cases.', href: '#' },
+      { name: 'AI solution design and development', desc: 'Your AI development partner for solutions that actually deliver. We design modular AI systems based on autonomous and cooperative agents. Using frameworks such as LangChain, LangGraph, and CrewAI, we orchestrate multi-agent workflows that connect models, APIs, and enterprise tools for autonomous decision-making and execution.', href: '#' },
+      { name: 'Generative AI Consulting', desc: 'Generative AI consulting helps an enterprise identify high-value use cases, evaluate LLMs and platforms, design a secure architecture, implement and integrate, and govern for risk and compliance. Leverage the power of generative AI to transform enterprise content creation, data processing, and other critical business functions.', href: '#' },
+    ],
+    cta: { label: 'Explore AI consulting services', href: '#' },
+  },
+  {
+    id: 'software',
+    num: '03',
+    tab: 'AI agent development',
+    tag: 'AI agent development & AI-driven automation',
+    title: 'AI agent development services',
+    desc: 'Custom AI agents for workflow automation and multi-agent orchestration, with one team throughout. With deep expertise in AI, ML, data engineering, and system integration, we design intelligent, secure, and high-performing AI-driven solutions tailored to enterprise needs. Drive growth. Move faster. Reduce costs. AI Agents and Software built by top engineers — we build the apps and intelligent AI agents that 10× your team’s productivity, from customer-facing products to internal automation.',
+    links: [
+      { name: 'AI agent strategy', desc: 'AI Agents Services help organizations operationalize AI through assistants and autonomous agents that work across enterprise systems. From understanding your data landscape to designing AI governance frameworks, we ensure that AI integration aligns with your enterprise architecture and needs.', href: '#' },
+      { name: 'Custom AI Agent Development Services', desc: 'We build AI agents tailored to specific enterprise needs, ensuring they align with operational workflows, security standards, and compliance requirements. By combining language model orchestration (like Gemini and Claude) with integration systems (like n8n), our custom AI agents operate directly inside your business environment.', href: '#' },
+      { name: 'AI agent integration', desc: 'AI agent integration services — connect AI agents to your enterprise systems, APIs, identity and data with typed tools, allow-listed actions, human approvals and full step-level observability. Our approach involves API-driven integrations, middleware configurations, and data-pipeline orchestration to connect AI agents with CRMs, ERPs, cloud platforms, and on-premises environments.', href: '#' },
+      { name: 'AI agent architecture and design', desc: 'AI agent architecture is the engineering discipline that defines how a model, tools, memory, orchestration, and runtime control combine into a coordinated workflow rather than isolated model calls. We design robust AI agent architectures that support scalability, efficiency, and real-time decision-making.', href: '#' },
+      { name: 'AI agent lifecycle management', desc: 'Agent lifecycle management (ALM) is the end-to-end process of managing AI agents throughout their operational life — from planning and building through testing, deployment, monitoring, governance, optimization and decommissioning. Our approach incorporates AI observability practices, including traceability, performance monitoring, and behavior auditing.', href: '#' },
+      { name: 'Multi-agent system (MAS)', desc: 'A multi-agent system (MAS) consists of multiple AI agents working collectively to perform tasks on behalf of a user or another system. At the core of AI agents are large language models (LLMs) that design workflows and use available tools autonomously.', href: '#' },
+    ],
+    cta: { label: 'Explore AI agent development services', href: '#' },
+  },
+  {
+    id: 'ai-data',
+    num: '04',
+    tab: 'Software engineering Provider',
+    tag: 'Software engineering services',
+    title: 'Software Engineering Services & Solutions',
+    desc: 'At Absolute Solutions, we specialize in developing custom software that transforms business operations, enhances productivity, and drives growth. Our team of experienced developers uses the latest technologies and industry best practices to deliver high-quality, scalable, and secure software solutions. Whether you need a simple business application or a complex enterprise system, we have the expertise to bring your vision to life. We follow agile methodologies to ensure timely delivery and full transparency throughout the development process. We have spent over two decades building and refining engineering practices for enterprise clients, growing from a product company into a global software development service provider.',
+    links: [
+      { name: 'Custom Software Development', desc: 'Tailored software solutions designed to meet your specific business needs and workflows — requirements analysis, custom architecture design, agile development, quality assurance. As an enterprise custom software development company, we help organizations improve critical operations through custom software, technology foundations, and AI-enabled workflows.', href: '#' },
+      { name: 'Enterprise Software Solutions', desc: 'Scalable enterprise-grade applications for large organizations and complex operations. We provide ERP systems, CRM solutions, supply chain management, and business intelligence — designed for enterprise scale from the start and delivered in stages to reduce disruption.', href: '#' },
+      { name: 'Cloud Based Application & Services', desc: 'Modern cloud-native applications with high availability and scalability. We provide AWS/Azure/GCP integration, SaaS development, microservices architecture, and API development. Cloud applications offer reduced resource needs, more convenience in updating, and access across devices.', href: '#' },
+      { name: 'Legacy System Modernization', desc: 'Re-design legacy technology to support uninterrupted business growth. We modernize your data infrastructure by restructuring and optimizing existing software code to improve its quality, flexibility, longevity, and performance — reducing technical debt and minimizing risks.', href: '#' },
+      { name: 'DevOps Services', desc: 'Bringing together business, development, and operations for rapid and continuous delivery. Our DevOps approach is built on four key pillars — People, Process, Technology, and Governance — to ensure high-quality software delivered collaboratively and regularly.', href: '#' },
+      { name: 'Web & Mobile Development', desc: 'We build high-performance, scalable, low-latency web applications with intuitive interfaces and robust security — plus native and cross-platform mobile apps covering product discovery, roadmap planning, UI/UX design, QA, deployment, and ongoing maintenance and support.', href: '#' },
+    ],
+    cta: { label: 'Explore software engineering services', href: '#' },
+  },
+  {
+    id: 'cloud',
+    num: '05',
+    tab: 'Cloud & DevOps',
+    tag: 'Cloud & Infrastructure to carry AI workloads',
+    title: 'Our cloud consulting and engineering services',
+    desc: 'In today’s ever-changing business landscape, organizations need a fundamentally different approach to building and managing technology. We assess what you are running before recommending changes, then build and stay accountable for how the result performs in production. Our teams have delivered 200+ cloud projects over the last five years across 22+ industries. Our cloud consulting and engineering services help you design, implement, and manage cloud solutions that meet your business needs — end-to-end support for cloud adoption, migration, optimization, and management, ensuring your infrastructure is secure, scalable, and cost-effective.',
+    links: [
+      { name: 'Cloud strategy design', desc: 'Our cloud strategy consultants work closely with businesses to review priorities, assess current cloud usage and develop tailored cloud strategies — unlocking increased agility, improved scalability, enhanced security, reduced costs and access to the latest innovations.', href: '#' },
+      { name: 'Migration to the cloud', desc: 'Cloud migration services: on-premises to cloud migration or cloud to cloud migration. A secure, structured, and risk-controlled approach to transitioning from on-premise infrastructure — executed through a phased approach that minimizes disruption and creates a cloud-ready foundation for analytics and AI.', href: '#' },
+      { name: 'Cloud-native application development', desc: 'We offer cloud application consulting, custom application development, cloud infrastructure management, AI-accelerated app migration, hyperscaler AI platform implementation, and cloud application security — plus DevOps, continuous delivery, and ongoing maintenance and support.', href: '#' },
+      { name: 'DevOps & CI/CD', desc: 'Our CI/CD services give your DevOps team secure, compliant, and fully automated pipelines, helping you deploy 10x faster with zero downtime. Our specialist services include CI/CD health check & roadmap, pipeline development, and secure-by-default CI/CD (DevSecOps).', href: '#' },
+      { name: 'Cloud infrastructure assessment', desc: 'Improve the performance of your solutions by assessing, modernizing, and optimizing your cloud environment. Our cloud experts identify where resources are underused and what changes can improve performance, scalability, and ROI — including cost waste and right-sizing opportunities.', href: '#' },
+      { name: 'Cloud security', desc: 'Cloud security and disaster recovery help you protect your data with encryption and continuous monitoring, and back up critical assets to keep operations resilient. We secure AI workloads and agents, enforce least-privilege access, and integrate identity governance with security operations.', href: '#' },
+    ],
+    cta: { label: 'Explore cloud services', href: '#' },
+  },
+  {
+    id: 'staffing',
+    num: '06',
+    tab: 'Data analytics',
+    tag: 'Advanced analytics for better performance',
+    title: 'Data analytics services for growth',
+    desc: 'With large volumes of data coming in from diverse sources, it is important to make the best use of data and extract actionable insights that can aid in making informed decisions. Our data analytics services allow clients to utilize advanced analytics and predictive ML & AI-focused capabilities across numerous industry verticals — including supply chain forecasting, Center of Excellence (CoE) strategy, industrial IoT and sensors, deep-learning based information retrieval, MLOps for model deployment, and optimization and scheduling. Each business has different goals but every business can be facilitated through our AI and data analytics services.',
+    links: [
+      { name: 'Supply chain forecasting', desc: 'Optimize your supply chain, enhance decision-making, and leverage real-time market information to gain a competitive edge with our end-to-end supply chain management process.', href: '#' },
+      { name: 'Center of Excellence (CoE) strategy', desc: 'Identify AI opportunities that align with your company goals, and provide end-to-end implementation support in establishing an AI CoE — combining strategic alignment, operational execution, and knowledge retention for sustainable innovation.', href: '#' },
+      { name: 'Industrial IoT and sensors', desc: 'Extract valuable insights from complex raw sensor data to create actionable metrics and gather predictive insights for applications such as machine maintenance, production plan optimization, and patient health measurement.', href: '#' },
+      { name: 'Deep-learning based information retrieval', desc: 'Utilize both internal and publicly available text data, identify market needs, and gain a competitive advantage through accelerated innovation.', href: '#' },
+      { name: 'MLOps for model deployment', desc: 'Get your business driven with strategic MLOps solutions. We provide insights and support that drive innovation while addressing your specific needs and aspirations in the ever-evolving world of AI.', href: '#' },
+      { name: 'Optimization and scheduling', desc: 'Improve cost-efficiency and leverage advanced mathematical programming and simulations for optimized operational plans and decisions.', href: '#' },
+    ],
+    cta: { label: 'Explore data analytics services', href: '#' },
+  },
+];
+
+/* Panel content — desktop & mobile dono jagah reuse hota hai */
+function WwdPanel({ cat }) {
+  return (
+    <>
+      <span className="wwd-tag">{cat.tag}</span>
+      <h3 className="wwd-panel-title">{cat.title}</h3>
+      <p className="wwd-panel-desc">{cat.desc}</p>
+      <ul className="wwd-links">
+        {cat.links.map((l) => (
+          <li key={l.name}>
+            <a href={l.href}>
+              <span className="wwd-link-icon">→</span>
+              <span className="wwd-link-text">
+                <b>{l.name}</b>
+                <small>{l.desc}</small>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href={cat.cta.href} className="wwd-panel-cta">
+        {cat.cta.label} <span>→</span>
+      </a>
+    </>
+  );
+}
 
 export default function Home() {
   /* HERO SLIDER */
@@ -390,7 +572,8 @@ export default function Home() {
 
   /* CERTIFICATE LIGHTBOX */
   const [lightbox, setLightbox] = useState(null);
-    /* ENGAGEMENT PHASES — interactive stepper */
+
+  /* ENGAGEMENT PHASES — interactive stepper */
   const [phaseIdx, setPhaseIdx] = useState(0);
   const [phasePaused, setPhasePaused] = useState(false);
 
@@ -400,6 +583,9 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [phasePaused]);
 
+  /* WHAT WE DO — active service tab (-1 = mobile pe sab band) */
+  const [activeSvc, setActiveSvc] = useState(0);
+  const desktopActive = activeSvc < 0 ? 0 : activeSvc;
 
   /* COUNT-UP ANIMATION */
   useEffect(() => {
@@ -582,7 +768,7 @@ export default function Home() {
             <div className="trust-head-left">
               <p className="trust-eyebrow">IT Company in Riyadh Saudi Arabia</p>
               <h1 className="trust-title">
-                IT Company in Riyadh 20 Years of Experience in 
+                IT Company in Riyadh 20 Years of Experience in
                 <em>AI Agent Development &amp; Cybersecurity - Cloud Computing Security Services</em>
                 <span className="trust-title-tag">
                   Trusted Software Development Company in Saudi Arabia
@@ -628,10 +814,9 @@ export default function Home() {
               </h2>
               <span className="certs-line"></span>
               <p className="certs-sub">
-                Our commitment to excellence, security, and quality is validated by international standards
-                Absolute Solutions is proud to be certified with internationally recognized standards that demonstrate our commitment to quality, security, and continuous improvement.
-               — giving our clients complete confidence in every project
-                we deliver.
+                Our commitment to excellence, security, and quality is validated by international standards.
+                Absolute Solutions is proud to be certified with internationally recognized standards that demonstrate our commitment to quality, security, and continuous improvement
+                — giving our clients complete confidence in every project we deliver.
               </p>
             </div>
             <div className="certs-grid">
@@ -696,9 +881,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* =============================================
-          SECTION: GOOGLE REVIEWS (real reviews)
-      ============================================== */}
+      {/* ============ SECTION: GOOGLE REVIEWS ============ */}
       <section className="gr-section" id="google-reviews">
         <div className="gr-head reveal" ref={addRevealRef}>
           <p className="sec-eyebrow">Google Reviews</p>
@@ -766,7 +949,6 @@ export default function Home() {
       {/* ============ SECTION 4: AI STATEMENT + PERSONAS ============ */}
       <section className="ai-statement" id="ai-statement">
 
-        {/* BG IMAGE + GLOW ORBS */}
         <div className="ai-bg-image" aria-hidden="true"></div>
         <span className="ai-glow ai-glow-1" aria-hidden="true"></span>
         <span className="ai-glow ai-glow-2" aria-hidden="true"></span>
@@ -780,9 +962,7 @@ export default function Home() {
               <em>Advanced Cloud-to-Cloud Integration & AI Agent Development Services</em>
             </h2>
             <p className="ai-desc">
-              Our Artificial Intelligence Consulting services help <b>CTOs and CIOs</b> adopt AI and modern cloud technologies with secure, scalable solutions. We provide <b>AI agent development services</b>, generative AI consulting, and <b>cloud computing and cloud services</b> integration to connect applications, data, and workflows across leading cloud environments. Our approach combines <b>cyber security identity and access management</b>, cloud computing services, data analytics AI, and intelligent automation to improve operational efficiency and business decision-making. From AI adoption and custom application development to cloud migration and cloud computing security services, we help organizations build reliable cybersecurity platforms, strengthen information security, and create AI-powered solutions that are ready to scale.
-
-
+              Our Artificial Intelligence Consulting services help CTOs and CIOs adopt modern cloud technologies with secure, scalable solutions. We provide expert ai agent development services, generative ai consulting, and advanced cloud-to-cloud architectures to connect your applications and workflows seamlessly. We turn AI adoption into measurable engineering outcomes—improving operational efficiency without compromising enterprise security.
             </p>
             <div className="ai-actions">
               <a href="/contact" className="ai-btn">
@@ -825,7 +1005,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* FLOATING TERMINAL */}
             <div className="ai-terminal" aria-hidden="true">
               <div className="ai-terminal-bar">
                 <span></span><span></span><span></span>
@@ -839,7 +1018,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* FLOATING LIVE BADGE */}
             <div className="ai-float-badge" aria-hidden="true">
               <i></i> Live delivery tracking
             </div>
@@ -848,7 +1026,6 @@ export default function Home() {
 
         {/* PERSONAS: For CTOs / For CIOs */}
         <div className="ai-personas reveal" ref={addRevealRef}>
-
           <div className="ai-persona">
             <div className="ai-persona-inner">
               <div className="ai-persona-top">
@@ -885,21 +1062,16 @@ export default function Home() {
               </p>
             </div>
           </div>
-
         </div>
 
-        {/* POSITION STATEMENT */}
         <p className="ai-position reveal" ref={addRevealRef}>
           <em>Pragmatic AI Software Engineering</em> is Absolute Solution's position on both —
           measured on your <span className="ai-position-mark">actual codebase</span>, connected to
           your <span className="ai-position-mark">actual infrastructure</span>, before it scales.
         </p>
       </section>
-       
 
-             {/* =============================================
-          SECTION 4-B: ENGAGEMENT PHASES (interactive)
-      ============================================== */}
+      {/* ============ SECTION 4-B: ENGAGEMENT PHASES ============ */}
       <section
         className="phases-section"
         id="phases"
@@ -909,12 +1081,11 @@ export default function Home() {
         <div className="phases-head reveal" ref={addRevealRef}>
           <p className="sec-eyebrow">How We Engage</p>
           <h2 className="phases-title">
-            Four phases. One exit at each.
+            Four Phases. Measurable AI Agent Development & Technology Results.
             <em>No long-term commitment at any of them.</em>
           </h2>
         </div>
 
-        {/* ——— INTERACTIVE STEPPER ——— */}
         <div className="phases-stepper reveal" ref={addRevealRef}>
           <span className="phases-rail">
             <span
@@ -939,7 +1110,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* ——— ACTIVE PHASE PANEL ——— */}
         <div className="phase-panel reveal" ref={addRevealRef}>
           <div className="phase-panel-left">
             <span className="phase-duration">{PHASES[phaseIdx].duration}</span>
@@ -960,411 +1130,180 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* ============ SECTION 5: SERVICES DIRECTORY ============ */}
-      <section className="services-directory">
-        <div className="section-heading reveal" ref={addRevealRef}>
+      {/* ============ SECTION 5: WHAT WE DO (N-iX STYLE — FIXED) ============ */}
+      <section className="wwd-section" id="what-we-do">
+        <div className="wwd-head reveal" ref={addRevealRef}>
           <div>
-            <p className="eyebrow" style={{ color: 'var(--muted)' }}>
-              IT &amp; Cybersecurity Solutions
-            </p>
-            <h2>
-              Trusted IT &amp; Cybersecurity Solutions,<em>for Business Growth</em>
+            <p className="sec-eyebrow">What We Do</p>
+            <h2 className="wwd-title">
+              Full-spectrum IT &amp; cybersecurity services,
+              <em>engineered around your business goals</em>
             </h2>
           </div>
-          <a href="/products">View all services →</a>
-        </div>
-
-        <div className="services-dir-grid reveal" ref={addRevealRef}>
-          {/* COLUMN 1: Banking */}
-          <div className="svc-column">
-            <div className="svc-column-head">
-              <span className="svc-tag">Banking &amp; Finance Services</span>
-              <h3>
-                Banking &amp; Financial
-                <br />
-                Technology Solutions
-              </h3>
-              <p>
-                Absolute Solutions provides innovative banking and financial technology solutions designed to help
-                financial institutions improve efficiency, security, and customer experience. Our solutions support
-                modern banking operations with reliable technology, secure systems, and scalable digital services.
-                <br />
-                We help banks and financial organizations streamline operations, strengthen cybersecurity, modernize
-                banking systems, and deliver secure digital banking experiences. Our technology-driven approach
-                enables businesses to adapt to changing financial needs while building reliable and future-ready
-                banking infrastructure.
-              </p>
-            </div>
-            <ul className="svc-list">
-              <li>
-                <a href="https://ab-sol.net/account-statement">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Account Statement</b>
-                    <small>Automated statement generation &amp; delivery</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/billing-vat-ems">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Billing &amp; VAT (EMS)</b>
-                    <small>Electronic billing &amp; VAT compliance system</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/customer-account-master-data">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Customer Account Master Data</b>
-                    <small>Centralized customer data management</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/federal-reporting">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Federal Reporting</b>
-                    <small>Regulatory compliance &amp; federal reporting tools</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/mci-link-application">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>MCI Link Application</b>
-                    <small>Seamless MCI integration platform</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/ipo-management-module">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>IPO Management Module</b>
-                    <small>Complete IPO lifecycle management</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/auction-bidding-system">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Auction &amp; Bidding System</b>
-                    <small>Digital auction &amp; bid management platform</small>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <a href="https://ab-sol.net/products" className="svc-view-all">
-              View All Banking Solutions →
-            </a>
-          </div>
-
-          {/* COLUMN 2: SaaS */}
-          <div className="svc-column">
-            <div className="svc-column-head">
-              <span className="svc-tag">SaaS</span>
-              <h3>
-                SaaS Solutions for Industrial &amp;
-                <br />
-                Business Applications
-              </h3>
-              <p>
-                Absolute Solutions provides scalable Software as a Service (SaaS) solutions designed to help
-                businesses streamline operations, reduce software infrastructure costs, and improve productivity.
-                Our cloud-based software solutions provide flexible access to essential business applications
-                without the need for costly on-premise installation and maintenance.
-                <br />
-                Our SaaS development solutions help businesses adopt secure, scalable, and cost-effective technology
-                while supporting long-term growth. From industrial applications to specialized business software, we
-                deliver solutions that can adapt to changing business needs.
-              </p>
-            </div>
-            <ul className="svc-list">
-              <li>
-                <a href="https://ab-sol.net/inventory-control-management">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Inventory Control &amp; Management</b>
-                    <small>Real-time inventory tracking &amp; optimization</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/raptor-eye-solution">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Raptor Eye Solution</b>
-                    <small>Advanced surveillance &amp; monitoring system</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/document-management-system">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Document Management System</b>
-                    <small>Secure digital document workflow &amp; storage</small>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <a href="https://ab-sol.net/products" className="svc-view-all">
-              View All SaaS Solutions →
-            </a>
-          </div>
-
-          {/* COLUMN 3: Health */}
-          <div className="svc-column">
-            <div className="svc-column-head">
-              <span className="svc-tag">Healthcare Software Solutions</span>
-              <h3>
-                Healthcare Software Development Solutions
-                <br /> |Health Industry
-              </h3>
-              <p>
-                Absolute Solutions provides secure and scalable healthcare software solutions designed to help
-                healthcare organizations streamline operations, improve efficiency, and deliver better digital
-                experiences. Our technology solutions support modern healthcare workflows while focusing on security,
-                reliability, and performance.
-                <br />
-                We develop custom healthcare software tailored to the needs of hospitals, clinics, medical
-                organizations, and healthcare businesses, helping them modernize their operations with innovative
-                digital solutions.
-              </p>
-            </div>
-            <ul className="svc-list">
-              <li>
-                <a href="https://ab-sol.net/smartonco">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>SmartOnco</b>
-                    <small>Oncology management &amp; treatment planning</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/medical-care-registries">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Medical Care Registries</b>
-                    <small>Patient registry &amp; medical records system</small>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://ab-sol.net/medical-healthcare-industries-solutions">
-                  <span className="svc-list-icon">→</span>
-                  <div>
-                    <b>Healthcare Industries Portfolio</b>
-                    <small>Complete healthcare technology suite</small>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <a href="https://ab-sol.net/medical-healthcare-industries-solutions" className="svc-view-all">
-              View All Healthcare Solutions →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ SECTION 6: CATEGORIES ============ */}
-      <section className="cat-section">
-        <div className="cat-header reveal" ref={addRevealRef}>
-          <p className="eyebrow" style={{ color: 'var(--muted)' }}>
-            WHAT WE DO
-          </p>
-          <h2>
-            Our Business Ethics &amp; Values, <em>Simplified.</em>
-          </h2>
-          <p>
-            From enterprise applications and IT services to advanced cybersecurity, we help organizations build
-            secure and intelligent digital ecosystems.
-          </p>
-        </div>
-
-        <div className="cat-grid">
-          <a href="/products" className="cat-card reveal" data-color="indigo" ref={addRevealRef}>
-            <div className="cat-card-img">
-              <img src="/images/business-applications.png" alt="Business Applications" />
-              <span className="cat-card-num">01</span>
-            </div>
-            <div className="cat-card-body">
-              <h3>
-                Business
-                <br />
-                Applications
-              </h3>
-              <p>Powerful enterprise solutions designed around your business.</p>
-              <span className="cat-card-link">
-                Explore
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </div>
-            <div className="cat-card-bar"></div>
-          </a>
-
-          <a href="/cyber-security" className="cat-card reveal delay" data-color="crimson" ref={addRevealRef}>
-            <div className="cat-card-img">
-              
-              <img src="/images/cyber-security.png" alt="Cyber Security" />
-              <span className="cat-card-num">02</span>
-            </div>
-            <div className="cat-card-body">
-              <h3>
-                Cyber
-                <br />
-                Security
-              </h3>
-              <p>Protect your organization with advanced cybersecurity solutions.</p>
-              <span className="cat-card-link">
-                Explore
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </div>
-            <div className="cat-card-bar"></div>
-          </a>
-
-          <a href="/software-development" className="cat-card reveal delay2" data-color="teal" ref={addRevealRef}>
-            <div className="cat-card-img">
-
-             <img src="/images/software-development.png" alt="Software Development" />
-
-              <span className="cat-card-num">03</span>
-            </div>
-            <div className="cat-card-body">
-              <h3>
-                Software
-                <br />
-                Development
-              </h3>
-              <p>Build scalable and intelligent digital products.</p>
-              <span className="cat-card-link">
-                Explore
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </div>
-            <div className="cat-card-bar"></div>
-          </a>
-
-          <a
-            href="/web-development"
-            className="cat-card reveal"
-            style={{ transitionDelay: '.32s' }}
-            data-color="slate"
-            ref={addRevealRef}
-          >
-            <div className="cat-card-img">
-
-              <img src="/images/it-infrastructure.png" alt="IT Infrastructure" />
-
-              <span className="cat-card-num">04</span>
-            </div>
-            <div className="cat-card-body">
-              <h3>
-                IT &amp;
-                <br />
-                Infrastructure
-              </h3>
-              <p>Reliable infrastructure and technology services for modern businesses.</p>
-              <span className="cat-card-link">
-                Explore
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </div>
-            <div className="cat-card-bar"></div>
+          <a href="https://ab-sol.net/products" className="sec-link">
+            View all services <span>→</span>
           </a>
         </div>
-      </section>
 
-      {/* ============ SECTION 7: CASE STUDIES ============ */}
-      <section className="cases-section" id="case-studies">
-        <div className="cases-head reveal" ref={addRevealRef}>
-          <div>
-            <p className="sec-eyebrow">Success Stories</p>
-            <h2 className="sec-h2">
-              Results our clients measure,<em>not just promises.</em>
-            </h2>
+        {/* ——— DESKTOP: interactive tabs (saare panels stacked, NO remount) ——— */}
+        <div className="wwd-layout reveal" ref={addRevealRef}>
+          <div className="wwd-tabs" role="tablist" aria-label="Service categories">
+            {SERVICES_DIRECTORY.map((cat, i) => (
+              <button
+                key={cat.id}
+                type="button"
+                role="tab"
+                aria-selected={desktopActive === i}
+                className={`wwd-tab${desktopActive === i ? ' active' : ''}`}
+                onClick={() => setActiveSvc(i)}
+                onMouseEnter={() => setActiveSvc(i)}
+              >
+                <span className="wwd-tab-num">{cat.num}</span>
+                <span className="wwd-tab-label">{cat.tab}</span>
+                <span className="wwd-tab-arrow">→</span>
+              </button>
+            ))}
+
+            <div className="wwd-tab-footer">
+              <p>Not sure which service fits your needs?</p>
+              <a href="/contact">Talk to our experts <span>→</span></a>
+            </div>
           </div>
-          <a href="/case-studies" className="sec-link">View all case studies →</a>
+
+          {/* Saare 6 panels pehle se DOM mein — sirf crossfade hota hai */}
+          <div className="wwd-panels">
+            {SERVICES_DIRECTORY.map((cat, i) => (
+              <div
+                key={cat.id}
+                role="tabpanel"
+                className={`wwd-panel${desktopActive === i ? ' active' : ''}`}
+                aria-hidden={desktopActive !== i}
+              >
+                <WwdPanel cat={cat} />
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="cases-grid reveal" ref={addRevealRef}>
-          {CASE_STUDIES.map((cs, i) => (
-            <article className={`case-card${cs.featured ? ' featured' : ''}`} key={i}>
-              <div className={`case-media theme-${cs.theme}`}>
-                <span className="case-tag">{cs.tag}</span>
-                <div>
-                  <div className="case-metric">{cs.metric}</div>
-                  <div className="case-metric-label">{cs.metricLabel}</div>
+        {/* ——— MOBILE: smooth accordion (true toggle — open/close dono) ——— */}
+        <div className="wwd-accordion reveal" ref={addRevealRef}>
+          {SERVICES_DIRECTORY.map((cat, i) => (
+            <div key={cat.id} className={`wwd-acc${activeSvc === i ? ' open' : ''}`}>
+              <button
+                type="button"
+                className="wwd-acc-head"
+                aria-expanded={activeSvc === i}
+                onClick={() => setActiveSvc(activeSvc === i ? -1 : i)}
+              >
+                <span className="wwd-acc-num">{cat.num}</span>
+                <span className="wwd-acc-label">{cat.tab}</span>
+                <span className="wwd-acc-toggle">+</span>
+              </button>
+              <div className="wwd-acc-body">
+                <div className="wwd-acc-body-inner">
+                  <WwdPanel cat={cat} />
                 </div>
               </div>
-              <div className="case-body">
-                <h3>{cs.title}</h3>
-                <p>{cs.desc}</p>
-                <div className="case-stats">
-                  {cs.stats.map((s) => (
-                    <div className="case-stat" key={s.label}>
-                      <b>{s.value}</b>
-                      <span>{s.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <a href="/case-studies" className="case-link">
-                  Read full story <span>→</span>
-                </a>
-              </div>
-            </article>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* ============ SECTION 8: INDUSTRIES ============ */}
+     {/* ============ SECTION 6: CLIENT OUTCOMES BY INDUSTRY (LUXURY) ============ */}
+<section className="coi-section" id="client-outcomes">
+  <div className="coi-head reveal" ref={addRevealRef}>
+    <div>
+      <p className="sec-eyebrow">CLIENT OUTCOMES BY INDUSTRY</p>
+      <h2 className="sec-h2">
+        One Stop Shop Technology Partners —
+        <em>Technology That Delivers Real Business Outcomes</em>
+      </h2>
+    </div>
+    <a href="https://ab-sol.net/products" className="sec-link">
+      View all solutions <span>→</span>
+    </a>
+  </div>
+
+  <div className="coi-grid">
+    {INDUSTRY_OUTCOMES.map((ind, idx) => (
+      <article
+        className={`coi-card theme-${ind.theme}${idx === 0 ? ' featured' : ''} reveal`}
+        key={ind.id}
+        ref={addRevealRef}
+        style={{ transitionDelay: `${idx * 0.1}s` }}
+      >
+        {/* ——— IMAGE MEDIA ——— */}
+        <div className="coi-media">
+          <img
+            src={ind.img}
+            alt={`${ind.title} — Absolute Solutions`}
+            loading="lazy"
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
+          <div className="coi-media-overlay"></div>
+
+          <span className="coi-ghost-num">{ind.num}</span>
+          <span className="coi-count">{ind.solutions.length} Solutions</span>
+
+          <div className="coi-media-caption">
+            <h3 className="coi-title">{ind.title}</h3>
+            <p className="coi-tagline">{ind.tag}</p>
+          </div>
+        </div>
+
+        {/* ——— BODY ——— */}
+        <div className="coi-body">
+          <p className="coi-desc">{ind.desc}</p>
+
+          <ul className="coi-list">
+            {ind.solutions.map((s) => (
+              <li key={s.name}>
+                <a href={s.href}>
+                  <span className="coi-link-icon">→</span>
+                  <span className="coi-link-name">{s.name}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <a href={ind.cta.href} className="coi-cta">
+            {ind.cta.label} <span>→</span>
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+      {/* ============ SECTION 7: INDUSTRIES ============ */}
       <section className="industries-section" id="industries">
         <div className="ind-head reveal" ref={addRevealRef}>
           <p className="sec-eyebrow">Industries We Serve</p>
           <h2 className="sec-h2">
-            Deep domain expertise,<em>wherever you operate.</em>
+            Domain expertise that speaks<em>your industry's language</em>
           </h2>
         </div>
 
         <div className="industries-list reveal" ref={addRevealRef}>
           {INDUSTRIES.map((ind, i) => (
-            <a className="industry-row" href="/industries" key={i}>
+            <div className="industry-row" key={i}>
               <div className="industry-top">
-                <span className="industry-num">0{i + 1}</span>
-                <h3 className="industry-name">{ind.name}</h3>
+                <span className="industry-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="industry-name">{ind.name}</span>
                 <span className="industry-arrow">→</span>
               </div>
               <div className="industry-info">
                 <p>{ind.desc}</p>
                 <div className="industry-tags">
-                  {ind.tags.map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
+                  {ind.tags.map((t) => <span key={t}>{t}</span>)}
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* ============ SECTION 9: TESTIMONIALS ============ */}
+      {/* ============ SECTION 8: TESTIMONIALS ============ */}
       <section
         className="testimonials-section"
         id="testimonials"
@@ -1372,8 +1311,8 @@ export default function Home() {
         onMouseLeave={() => setTPaused(false)}
       >
         <div className="testi-inner reveal" ref={addRevealRef}>
-          <p className="sec-eyebrow">What Clients Say</p>
           <span className="testi-quote-mark">"</span>
+
           <div className="testi-slides">
             {TESTIMONIALS.map((t, i) => (
               <div className={`testi-slide${i === tIndex ? ' active' : ''}`} key={i}>
@@ -1388,21 +1327,24 @@ export default function Home() {
               </div>
             ))}
           </div>
+
           <div className="testi-nav">
             <button
+              type="button"
               className="testi-btn"
               aria-label="Previous testimonial"
-              onClick={() => setTIndex((p) => (p - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
+              onClick={() => setTIndex((tIndex - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
             >
               ←
             </button>
             <span className="testi-count">
-              0{tIndex + 1} / 0{TESTIMONIALS.length}
+              {String(tIndex + 1).padStart(2, '0')} / {String(TESTIMONIALS.length).padStart(2, '0')}
             </span>
             <button
+              type="button"
               className="testi-btn"
               aria-label="Next testimonial"
-              onClick={() => setTIndex((p) => (p + 1) % TESTIMONIALS.length)}
+              onClick={() => setTIndex((tIndex + 1) % TESTIMONIALS.length)}
             >
               →
             </button>
@@ -1410,12 +1352,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ SECTION 10: AWARDS ============ */}
+      {/* ============ SECTION 9: AWARDS ============ */}
       <section className="awards-section" id="awards">
         <div className="awards-head reveal" ref={addRevealRef}>
-          <p className="sec-eyebrow">Awards &amp; Recognition</p>
+          <p className="sec-eyebrow">Recognition</p>
           <h2 className="sec-h2">
-            Recognized by analysts,<em>rated by clients.</em>
+            Awards &amp;<em>industry recognition</em>
           </h2>
         </div>
 
@@ -1423,13 +1365,13 @@ export default function Home() {
           {AWARDS.map((a, i) => (
             <div className="award-card" key={i}>
               <span className="award-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="9" r="5" />
-                  <path d="M8.6 13.2 7 21l5-2.8L17 21l-1.6-7.8" />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4z" />
+                  <path d="M7 6H4a2 2 0 002 4h1M17 6h3a2 2 0 01-2 4h-1" />
                 </svg>
               </span>
               <div>
-                <p className="award-name">{a.name}</p>
+                <h3 className="award-name">{a.name}</h3>
                 <p className="award-org">{a.org} · {a.year}</p>
               </div>
             </div>
@@ -1437,109 +1379,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ SECTION 11: INSIGHTS ============ */}
+      {/* ============ SECTION 10: INSIGHTS ============ */}
       <section className="insights-section" id="insights">
-        <div className="cases-head reveal" ref={addRevealRef}>
+        <div className="section-heading reveal" ref={addRevealRef}>
           <div>
-            <p className="sec-eyebrow">Insights &amp; Blog</p>
+            <p className="sec-eyebrow">Insights</p>
             <h2 className="sec-h2">
-              Ideas from our engineers,<em>for your next decision.</em>
+              Latest thinking &amp;<em>engineering insights</em>
             </h2>
           </div>
-          <a href="/blog" className="sec-link">Visit the blog →</a>
+          <a href="/blog" className="sec-link">View all insights <span>→</span></a>
         </div>
 
         <div className="insights-grid reveal" ref={addRevealRef}>
-          {INSIGHTS.map((post, i) => (
-            <a className="insight-card" href="/blog" key={i}>
-              <div className={`insight-media theme-${post.theme}`}>
-                <span className="insight-cat">{post.cat}</span>
-                <span className="insight-num">0{i + 1}</span>
+          {INSIGHTS.map((ins, i) => (
+            <article className="insight-card" key={i}>
+              <div className={`insight-media theme-${ins.theme}`}>
+                <span className="insight-cat">{ins.cat}</span>
+                <span className="insight-num">{String(i + 1).padStart(2, '0')}</span>
               </div>
               <div className="insight-body">
-                <h3>{post.title}</h3>
-                <p className="insight-meta">{post.date} · {post.read}</p>
-                <span className="insight-link">
+                <h3>{ins.title}</h3>
+                <p className="insight-meta">{ins.date} · {ins.read}</p>
+                <a href="/blog" className="insight-link">
                   Read article <span>→</span>
-                </span>
+                </a>
               </div>
-            </a>
+            </article>
           ))}
         </div>
       </section>
 
-            {/* =============================================
-          SECTION: RESOURCES & PDF DOWNLOADS
-      ============================================== */}
+      {/* ============ SECTION 11: RESOURCES / PDF DOWNLOADS ============ */}
       <section className="res-section" id="resources">
         <div className="res-head reveal" ref={addRevealRef}>
-          <p className="sec-eyebrow">Resources &amp; Downloads</p>
+          <p className="sec-eyebrow">Resources</p>
           <h2 className="sec-h2">
-            Free reports,<em>real insights.</em>
+            Free guides, reports<em>&amp; downloadable PDFs</em>
           </h2>
           <p className="res-sub">
-            Download our research profiles and product brochures — see exactly how
-            our AI and security solutions work before you talk to anyone.
+            Practical playbooks, frameworks, and research from our engineering floor — no forms, no gates. Just download and read.
           </p>
         </div>
 
-        {/* ——— FEATURED BANNER ——— */}
-        <a
-          className="res-banner reveal"
-          ref={addRevealRef}
-          href={RESOURCES.featured.pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="res-banner-copy">
+        {/* Featured banner */}
+        <div className="res-banner reveal" ref={addRevealRef}>
+          <div>
             <span className="res-banner-tag">{RESOURCES.featured.tag}</span>
             <h3 className="res-banner-title">{RESOURCES.featured.title}</h3>
             <p className="res-banner-desc">{RESOURCES.featured.desc}</p>
             <span className="res-banner-meta">{RESOURCES.featured.meta}</span>
+            <div style={{ marginTop: 26 }}>
+              <a
+                href={RESOURCES.featured.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="res-banner-btn"
+              >
+                Download PDF <span>↓</span>
+              </a>
+            </div>
           </div>
-
-          <div className="res-banner-visual">
+          <div className="res-banner-visual" aria-hidden="true">
             <div className="res-doc">
               <span className="res-doc-fold"></span>
-              <span className="res-doc-line w70"></span>
               <span className="res-doc-line w90"></span>
-              <span className="res-doc-line w50"></span>
               <span className="res-doc-line w80"></span>
+              <span className="res-doc-line w70"></span>
               <span className="res-doc-line w60"></span>
+              <span className="res-doc-line w50"></span>
+              <span className="res-doc-badge">PDF</span>
             </div>
-            <span className="res-doc-badge">PDF</span>
-            <span className="res-banner-btn">
-              Download the report <span>↓</span>
-            </span>
           </div>
-        </a>
+        </div>
 
-        {/* ——— BROCHURE CARDS ——— */}
+        {/* Brochure cards */}
         <div className="res-grid reveal" ref={addRevealRef}>
           {RESOURCES.brochures.map((b, i) => (
             <a
-              className="res-card"
-              key={i}
               href={b.pdf}
               target="_blank"
               rel="noopener noreferrer"
+              className="res-card"
+              key={i}
             >
-              <div className="res-card-doc">
+              <div className="res-card-doc" aria-hidden="true">
                 <div className="res-mini-doc">
-                  <span className="res-doc-fold"></span>
+                  <span className="res-doc-line w90"></span>
                   <span className="res-doc-line w80"></span>
-                  <span className="res-doc-line w60"></span>
                   <span className="res-doc-line w70"></span>
+                  <span className="res-doc-line w50"></span>
+                  <span className="res-doc-badge sm">PDF</span>
                 </div>
-                <span className="res-doc-badge sm">PDF</span>
               </div>
               <div className="res-card-body">
                 <span className="res-card-tag">{b.tag}</span>
                 <h3>{b.title}</h3>
                 <p>{b.desc}</p>
-                <span className="res-card-link">
-                  Download Brochure <span>→</span>
-                </span>
+                <span className="res-card-link">Download now <span>↓</span></span>
               </div>
             </a>
           ))}
@@ -1549,45 +1486,60 @@ export default function Home() {
       {/* ============ SECTION 12: CONTACT ============ */}
       <section className="contact-section" id="contact">
         <div className="contact-inner">
-          <div className="contact-left reveal" ref={addRevealRef}>
-            <p className="ai-eyebrow">Contact Us</p>
+          <div className="reveal" ref={addRevealRef}>
+            <p className="sec-eyebrow" style={{ color: '#ff8a75' }}>Get In Touch</p>
             <h2 className="contact-title">
-              Let's build what's next,<em>together.</em>
+              Let's build something<em>exceptional together</em>
             </h2>
             <p className="contact-desc">
-              Tell us about your project and get a free consultation with our senior
-              engineers within one business day — no obligations, just clear answers.
+              Tell us about your project and get a free consultation with our senior engineers —
+              no sales pitch, just technical answers to your hardest questions.
             </p>
 
             <div className="contact-rows">
-              <a className="contact-row" href="mailto:salesksa@ab-sol.net">
+              <a href="tel:+966508250090" className="contact-row">
                 <span className="contact-row-icon">
-                  <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </span>
-                <div>
-                  <small>Email us</small>
-                  <b>salesksa@ab-sol.net</b>
-                </div>
-              </a>
-              <a className="contact-row" href="https://wa.me/966508250090" target="_blank" rel="noopener noreferrer">
-                <span className="contact-row-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                </span>
-                <div>
-                  <small>WhatsApp / Call</small>
+                <span>
+                  <small>Call / WhatsApp</small>
                   <b>+966 50 825 0090</b>
-                </div>
+                </span>
               </a>
+
+              <a href="mailto:info@ab-sol.net" className="contact-row">
+                <span className="contact-row-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M22 7l-10 6L2 7" />
+                  </svg>
+                </span>
+                <span>
+                  <small>Email us</small>
+                  <b>info@ab-sol.net</b>
+                </span>
+              </a>
+
+              <div className="contact-row">
+                <span className="contact-row-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <span>
+                  <small>Head Office</small>
+                  <b>Riyadh, Saudi Arabia</b>
+                </span>
+              </div>
             </div>
 
             <div className="contact-offices">
-              <span className="office-chip"><i></i>Riyadh — HQ</span>
-              <span className="office-chip"><i></i>USA</span>
-              <span className="office-chip"><i></i>Australia</span>
+              <span className="office-chip"><i></i> Riyadh — KSA</span>
+              <span className="office-chip"><i></i> USA</span>
+              <span className="office-chip"><i></i> Australia</span>
             </div>
           </div>
 
@@ -1595,14 +1547,14 @@ export default function Home() {
             {cSent ? (
               <div className="c-success">
                 <span className="c-success-check">✓</span>
-                <h3>Thank you, {cValues.name.split(' ')[0]}!</h3>
+                <h3>Message sent!</h3>
                 <p>
-                  Your request has been received. Our senior consultants will
-                  contact you within one business day.
+                  Thanks for reaching out — our team will get back to you
+                  within 24 hours.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleContactSubmit} noValidate>
+              <form noValidate onSubmit={handleContactSubmit}>
                 <div className="c-row2">
                   <input
                     className={`c-field${cErrors.name ? ' has-error' : ''}`}
@@ -1614,37 +1566,40 @@ export default function Home() {
                   <input
                     className={`c-field${cErrors.email ? ' has-error' : ''}`}
                     type="email"
-                    placeholder="Work Email *"
+                    placeholder="Email Address *"
                     value={cValues.email}
                     onChange={(e) => handleCChange('email', e.target.value)}
                   />
                 </div>
-                <input
-                  className="c-field"
-                  type="text"
-                  placeholder="Company"
-                  value={cValues.company}
-                  onChange={(e) => handleCChange('company', e.target.value)}
-                />
-                <select
-                  className="c-field"
-                  value={cValues.service}
-                  onChange={(e) => handleCChange('service', e.target.value)}
-                >
-                  <option value="">What do you need? (optional)</option>
-                  {CONTACT_SERVICES.map((s) => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
+
+                <div className="c-row2">
+                  <input
+                    className="c-field"
+                    type="text"
+                    placeholder="Company"
+                    value={cValues.company}
+                    onChange={(e) => handleCChange('company', e.target.value)}
+                  />
+                  <select
+                    className="c-field"
+                    value={cValues.service}
+                    onChange={(e) => handleCChange('service', e.target.value)}
+                  >
+                    <option value="">Select Service</option>
+                    {CONTACT_SERVICES.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
+                </div>
+
                 <textarea
                   className={`c-field${cErrors.message ? ' has-error' : ''}`}
                   placeholder="Tell us about your project *"
                   value={cValues.message}
                   onChange={(e) => handleCChange('message', e.target.value)}
                 ></textarea>
-                <button className="c-submit" type="submit">
-                  Request Free Consultation
-                </button>
+
+                <button type="submit" className="c-submit">Send Message</button>
                 <p className="c-note">
                   By submitting, you agree to our privacy policy. We never share your data.
                 </p>
@@ -1654,17 +1609,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ FOOTER ============ */}
+      <footer>
+        <p className="footer-brand">
+          <b>ABSOLUTE SOLUTIONS</b> — IT &amp; CYBERSECURITY
+        </p>
+        <p>Building secure, scalable software since 2006.</p>
+      </footer>
+
       {/* ============ CERTIFICATE LIGHTBOX ============ */}
       {lightbox && (
         <div className="cert-lightbox" onClick={() => setLightbox(null)}>
           <div className="cert-lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <button className="cert-lightbox-close" onClick={() => setLightbox(null)} aria-label="Close">
+            <button
+              type="button"
+              className="cert-lightbox-close"
+              onClick={() => setLightbox(null)}
+              aria-label="Close"
+            >
               ×
             </button>
             <img src={lightbox.img} alt={lightbox.name} />
-            <p className="cert-lightbox-name">
-              {lightbox.name} — {lightbox.subtitle}
-            </p>
+            <p className="cert-lightbox-name">{lightbox.name}</p>
           </div>
         </div>
       )}
