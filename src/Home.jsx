@@ -1796,7 +1796,7 @@ export default function Home() {
         <div className="ind-head reveal" ref={addRevealRef}>
           <p className="sec-eyebrow">What We Deliver</p>
           <h2 className="sec-h2">
-            Domain expertise that speaks<em>your industry's language</em>
+            Domain expertise that speaks <em> your industry's language</em>
           </h2>
           <p className="ind-sub">
             12 service domains, 60+ solutions — explore any category and jump straight to its dedicated page.
