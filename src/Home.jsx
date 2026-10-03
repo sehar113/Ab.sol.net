@@ -2053,7 +2053,7 @@ export default function Home() {
               Get In Touch
             </p>
             <h2 className="contact-title">
-              Let's build something<em>exceptional together</em>
+              Let's Work Together<em> Contact us Today</em>
             </h2>
             <p className="contact-desc">
               Briefly outline your project or challenge, and our team will respond within one business day —
@@ -2164,26 +2164,98 @@ export default function Home() {
             </div>
 
             <div className="trust-block">
-              <h3 className="trust-title-sm">Our partners</h3>
-              <div className="partners-row">
-                <span className="partner-badge" style={{ color: '#FF9900' }}>
-                  aws
-                </span>
-                <span className="partner-badge" style={{ color: '#5E5E5E' }}>
-                  Microsoft
-                </span>
-                <span className="partner-badge" style={{ color: '#4285F4' }}>
-                  Google Cloud
-                </span>
-                <span className="partner-badge" style={{ color: '#1F70C1' }}>
-                  IBM
-                </span>
-              </div>
-              <p className="trust-note">
-                Certified partner across cloud, security &amp; enterprise platforms — ISO 27001:2022 certified
-                delivery.
-              </p>
-            </div>
+  <h3 className="trust-title-sm">Our partners</h3>
+  <div className="partners-row">
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="partner-logo-mini"
+      aria-label="AWS Partner"
+    >
+      <img
+        src="/images/Amazon_Web_Services_Logo.svg.webp"
+        alt="AWS partner — Absolute Solutions"
+        loading="lazy"
+        onError={(e) => {
+          const box = e.currentTarget.parentElement;
+          e.currentTarget.style.display = 'none';
+          const fb = box.querySelector('.partner-fallback');
+          if (fb) fb.style.display = 'block';
+        }}
+      />
+      <span className="partner-fallback">AWS</span>
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="partner-logo-mini"
+      aria-label="Microsoft Partner"
+    >
+      <img
+        src="/images/Microsoft engineering softwares.avif"
+        alt="Microsoft partner — Absolute Solutions"
+        loading="lazy"
+        onError={(e) => {
+          const box = e.currentTarget.parentElement;
+          e.currentTarget.style.display = 'none';
+          const fb = box.querySelector('.partner-fallback');
+          if (fb) fb.style.display = 'block';
+        }}
+      />
+      <span className="partner-fallback">Microsoft</span>
+    </a>
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="partner-logo-mini"
+      aria-label="Google Cloud Partner"
+    >
+      <img
+        src="/images/Google Cloud development.png"
+        alt="Google Cloud partner — Absolute Solutions"
+        loading="lazy"
+        onError={(e) => {
+          const box = e.currentTarget.parentElement;
+          e.currentTarget.style.display = 'none';
+          const fb = box.querySelector('.partner-fallback');
+          if (fb) fb.style.display = 'block';
+        }}
+      />
+      <span className="partner-fallback">Google Cloud</span>
+    </a>
+
+    <a
+      href="https://www.ibm.com/partnerplus"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="partner-logo-mini"
+      aria-label="IBM Partner"
+    >
+      <img
+        src="/images/IBM.png"
+        alt="IBM partner — Absolute Solutions"
+        loading="lazy"
+        onError={(e) => {
+          const box = e.currentTarget.parentElement;
+          e.currentTarget.style.display = 'none';
+          const fb = box.querySelector('.partner-fallback');
+          if (fb) fb.style.display = 'block';
+        }}
+      />
+      <span className="partner-fallback">IBM</span>
+    </a>
+  </div>
+  <p className="trust-note">
+    Certified partner across cloud, security &amp; enterprise platforms —
+    ISO 27001:2022 certified delivery.
+  </p>
+</div>
+
           </aside>
         </div>
       </section>
